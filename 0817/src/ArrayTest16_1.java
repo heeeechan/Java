@@ -29,7 +29,7 @@ public class ArrayTest16_1 {
 		
 		for (int i = 0; i < size; i++) {
 			for(int j=0; j<=i; j++) {
-				System.out.print(String.format("%4d", matrix[i][j]));
+				System.out.printf("%4d", matrix[i][j]);
 			}
 			System.out.println();
 		}
