@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import acc.Account;
 
 public class Bank {
 	Account[] accs = new Account[100];
@@ -25,12 +26,12 @@ public class Bank {
 		String name = sc.nextLine();
 		System.out.print("입금액:");
 		int money = Integer.parseInt(sc.nextLine());
-		accs[accCnt++]=new Account(id,name,money);
+		accs[accCnt++] = new Account(id, name, money);
 	}
 	
 	Account searchAccById(String id) {
 		for(int i=0; i<accCnt; i++) {
-			if(accs[i].id.equals(id)) {
+			if(accs[i].getId().equals(id)) {
 				return accs[i];
 			}
 		}
@@ -42,7 +43,7 @@ public class Bank {
 		System.out.print("계좌번호:");
 		String id = sc.nextLine();
 		Account acc = searchAccById(id);
-		if(acc==null) {
+		if(acc == null) {
 			System.out.println("계좌번호가 틀립니다.");
 			return;
 		}

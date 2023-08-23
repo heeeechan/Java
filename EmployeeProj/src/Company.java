@@ -1,33 +1,38 @@
 public class Company {
-	Employee[] employees = new Employee[100];
+	Employee[] emps = new Employee[100];
 	int empCnt;
 
 	void enter(Employee emp) {
-		employees[empCnt] = emp;
-		empCnt++;
+		emps[empCnt++] = emp;
 	}
 
-	void setBonus(int id, int bonus) {
+	void setBonus(int id, int money) {
+		Employee emp = null;
 		for (int i = 0; i < empCnt; i++) {
-			if (id == employees[i].id) {
-				employees[i].sal += bonus;
+			if (emps[i].id == id) {
+				emp = emps[i];
+				break;
 			}
 		}
+		if (emp == null) {
+			System.out.println("사번이 틀립니다.");
+			return;
+		}
+		emp.payBonus(money);
 	}
 
 	void allEmployeeInfo() {
 		for (int i = 0; i < empCnt; i++) {
-			System.out.printf("사번:%d, 이름:%s, 부서:%s, 급여:%d\n",
-							  employees[i].id, employees[i].name, employees[i].dept, employees[i].sal);
+			System.out.println(emps[i].info());
 		}
 	}
-	
+
 	int getTotalPay() {
-		int total = employees[0].sal;
-		for (int i = 1; i < empCnt; i++) {
-			total += employees[i].sal;
+		int tot = 0;
+		for (int i = 0; i < empCnt; i++) {
+			tot += emps[i].getPay();
 		}
-		return total;
+		return tot;
 	}
 
 	public static void main(String[] args) {
@@ -46,9 +51,10 @@ public class Company {
 		System.out.println("총급여액:" + com.getTotalPay());
 	}
 }
+
 /*
- * 사번:10001, 이름:홍길동, 부서:홍보부, 급여:6000000
- * 사번:10001,이름:고길동, 부서:총무부, 급여:3500000
- * 사번:10001, 이름:하길동, 부서:개발부, 급여:4000000
- * 총급여액:13500000
- */
+사번:10001, 이름:홍길동, 부서:홍보부, 급여:6000000
+사번:10002, 이름:고길동, 부서:총무부, 급여:3500000
+사번:10003, 이름:하길동, 부서:개발부, 급여:4000000
+총급여액:13500000
+*/
