@@ -1,3 +1,9 @@
+import shape.Circle;
+import shape.ShapeSet;
+import shape.Point;
+import shape.Rectangle;
+import shape.Triangle;
+
 public class ShapeMain {
 	public static void main(String[] args) {
 		ShapeSet ss = new ShapeSet();
@@ -14,8 +20,8 @@ public class ShapeMain {
 /*
 [원:색(red),중심점(10,10),반지름(20)]
 [원:색(pink),중심점(5,5),반지름(10)]
-[삼각형:색(blue),점1(5,5),점1(10,5),점3(15,30)]
-[삼각형:색(sky),점1(3,3),점1(5,5),점3(7,7)]
+[삼각형:색(blue),점1(5,5),점2(10,5),점3(15,30)]
+[삼각형:색(sky),점1(3,3),점2(5,5),점3(7,7)]
 [사각형:색(green),시작점(30,30),너비(100),높이(50)]
 [사각형:색(yellow),시작점(5,5),너비(30),높이(15)]
  */
