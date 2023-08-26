@@ -35,6 +35,11 @@ public class Bank {
 		System.out.println("[일반계좌 개설]");
 		System.out.print("계좌번호:");
 		String id = sc.nextLine();
+		Account acc = searchAccById(id);
+		if (acc != null) {
+			System.out.println("계좌번호가 중복됩니다.");
+			return;
+		}
 		System.out.print("이름:");
 		String name = sc.nextLine();
 		System.out.print("입금액:");
