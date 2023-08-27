@@ -14,7 +14,7 @@ public class CompanyMain {
 		com.enter(emp3);
 		
 		com.regBusinessTrip(emp1, 1); // error, Permanent 출장 불가능
-		com.regBusinessTrip(emp2, 2); // Sales 출장 가능, 하루당 300000원을 incentive로 지급
+		com.regBusinessTrip(emp2, 2); // Sales 출장 가능, 하루당 300000원 incentive로 지급
 		com.regBusinessTrip(emp3, 1); // PartTime 출장 가능, (출장시간(1일24시간)*payPerTime)원 incentive로 지급
 
 		com.allEmployeeInfo();
