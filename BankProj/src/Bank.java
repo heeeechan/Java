@@ -16,7 +16,12 @@ public class Bank {
 		System.out.println("5. 전체계좌조회");
 		System.out.println("0. 종료");
 		System.out.print("선택>>");
-		return Integer.parseInt(sc.nextLine());
+		int sel = 0;
+		try {
+			sel = Integer.parseInt(sc.nextLine());
+		} catch (NumberFormatException e) {
+		}
+		return sel;
 	}
 
 	void selAccMenu() {
@@ -120,25 +125,29 @@ public class Bank {
 		Bank bank = new Bank();
 		int sel;
 		while (true) {
-			sel = bank.menu();
-			if (sel == 0)
-				break;
-			switch (sel) {
-			case 1:
-				bank.selAccMenu();
-				break;
-			case 2:
-				bank.deposit();
-				break;
-			case 3:
-				bank.withdraw();
-				break;
-			case 4:
-				bank.accountInfo();
-				break;
-			case 5:
-				bank.allAccountInfo();
-				break;
+			try {
+				sel = bank.menu();
+				if (sel == 0)
+					break;
+				switch (sel) {
+				case 1:
+					bank.selAccMenu();
+					break;
+				case 2:
+					bank.deposit();
+					break;
+				case 3:
+					bank.withdraw();
+					break;
+				case 4:
+					bank.accountInfo();
+					break;
+				case 5:
+					bank.allAccountInfo();
+					break;
+				}
+			} catch (NumberFormatException e) {
+				System.out.println("입력형식이 맞지 않습니다. 다시 선택하세요.");
 			}
 		}
 	}

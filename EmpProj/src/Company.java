@@ -1,4 +1,5 @@
 import emp.Employee;
+import emp.IBusinessTrip;
 
 public class Company {
 	Employee[] emps = new Employee[100];
@@ -21,7 +22,7 @@ public class Company {
 		return tot;
 	}
 	
-	public void regBusinessTrip(... emp, int day) {
-		
+	public void regBusinessTrip(IBusinessTrip emp, int day) {
+		emp.goBusinessTrip(day);
 	}
 }
