@@ -1,5 +1,8 @@
 package acc;
 
+import exc.BankError;
+import exc.BankException;
+
 public class SpecialAccount extends Account {
 	String grade = "Normal";
 	double interest = 0.01;
@@ -34,7 +37,10 @@ public class SpecialAccount extends Account {
 	}
 
 	@Override
-	public void deposit(int money) {
+	public void deposit(int money) throws BankException {
+		if (money <= 0) {
+			throw new BankException("입금오류", BankError.MINUS);
+		}
 		balance += money * (1 + interest);
 	}
 }

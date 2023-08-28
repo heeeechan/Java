@@ -2,7 +2,7 @@ import java.io.File;
 
 public class ExceptionTest7 {
 	public static void main(String[] args) {
-		File f = createFile(args);
+		File f = createFile(args[0]);
 		System.out.println(f.getName() + "파일이 성공적으로 생성되었습니다.");
 	}
 
