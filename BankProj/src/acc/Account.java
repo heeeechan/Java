@@ -36,8 +36,9 @@ public class Account {
 		name = aname;
 		balance = money;
 	}
-
-	public String info() {
+	
+	@Override
+	public String toString() {
 		return String.format("°èÁÂ¹øÈ£:%s,ÀÌ¸§:%s,ÀÜ¾×:%d", id, name, balance);
 	}
 

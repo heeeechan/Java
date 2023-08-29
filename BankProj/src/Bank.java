@@ -118,12 +118,12 @@ public class Bank {
 		Account acc = searchAccById(id);
 		if (acc == null)
 			throw new BankException("°èÁÂ¿À·ù", BankError.NOID);
-		System.out.println(acc.info());
+		System.out.println(acc);
 	}
 
 	void allAccountInfo() {
 		for (int i = 0; i < accCnt; i++) {
-			System.out.println(accs[i].info());
+			System.out.println(accs[i]);
 		}
 	}
 
