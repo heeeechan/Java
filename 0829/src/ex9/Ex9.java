@@ -5,13 +5,11 @@ class Ex9 {
 		if (src == null || delCh == null) {
 			return src;
 		}
-
-		StringBuffer sb = new StringBuffer(src);
-		for (int i = 0; i < delCh.length(); i++) {
-			int pos = sb.indexOf(String.valueOf(delCh.charAt(i)));
-			while (pos != -1) {
-				sb.deleteCharAt(pos);
-				pos = sb.indexOf(String.valueOf(delCh.charAt(i)));
+		StringBuilder sb = new StringBuilder(src);
+		for(int i=0; i<delCh.length(); i++) {
+			int idx = sb.indexOf(delCh.charAt(i)+"");
+			if(idx >= 0) {
+				sb.deleteCharAt(idx);
 			}
 		}
 		return sb.toString();
