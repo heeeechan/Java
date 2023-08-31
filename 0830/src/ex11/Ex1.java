@@ -20,18 +20,15 @@ class Ex1 {
 		list2.add(5);
 		list2.add(6);
 
-		// 교집합
 		kyo.addAll(list1);
-		kyo.retainAll(list2);
+		kyo.retainAll(list2); // kyo에 list2의 공통된 요소만 남김
 
-		// 차집합
 		cha.addAll(list1);
-		cha.removeAll(list2);
+		cha.removeAll(list2); // cha에서 list2의 요소를 모두 제거
 
-		// 합집합
 		hap.addAll(list1);
-		hap.addAll(list2);
-		// hap.removeAll(kyo);
+		hap.removeAll(list2); // hap에서 list2의 요소를 모두 제거
+		hap.addAll(list2); // 나머지 list2의 요소를 hap에 추가
 
 		System.out.println("list1=" + list1);
 		System.out.println("list2=" + list2);
