@@ -1,11 +1,16 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.StringTokenizer;
 import java.util.TreeMap;
 
 import acc.Account;
@@ -156,6 +161,71 @@ public class Bank {
 		}
 	}
 
+	public void store_t() {
+		BufferedWriter bw = null;
+		try {
+			bw = new BufferedWriter(new FileWriter("accs.txt"));
+			for (Account acc : accs.values()) {
+				String accStr = acc.getId();
+				accStr += "," + acc.getName();
+				accStr += "," + acc.getBalance();
+				if (acc instanceof SpecialAccount) {
+					accStr += "," + ((SpecialAccount) acc).getGrade().charAt(0) + "";
+				}
+				bw.write(accStr);
+				bw.newLine();
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (bw != null)
+					bw.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+	public void load_t() {
+		BufferedReader br = null;
+		try {
+			br = new BufferedReader(new FileReader("accs.txt"));
+			String accStr = null;
+			while ((accStr = br.readLine()) != null) {
+				StringTokenizer st = new StringTokenizer(accStr);
+				String id = st.nextToken();
+				String name = st.nextToken();
+				int balance = Integer.parseInt(st.nextToken());
+				if (st.countTokens() != 0) {
+					String grade = st.nextToken();
+					accs.put(id, new SpecialAccount(id, name, balance, grade));
+				} else {
+					accs.put(id, new Account(id, name, balance));
+				}
+//				String[] accProp = accStr.split(",");
+//				String id = accProp[0];
+//				String name = accProp[1];
+//				int balance = Integer.parseInt(accProp[2]);
+//				if (accProp.length == 4) {
+//					String grade = accProp[3];
+//					accs.put(id, new SpecialAccount(id, name, balance, grade));
+//				} else {
+//					accs.put(id, new Account(id, name, balance));
+//				}
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (br != null)
+					br.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
 	public void load_b() {
 		DataInputStream dis = null;
 		try {
@@ -183,6 +253,14 @@ public class Bank {
 				e.printStackTrace();
 			}
 		}
+	}
+
+	public void store_s() {
+
+	}
+
+	public void load_s() {
+
 	}
 
 	public static void main(String[] args) {
