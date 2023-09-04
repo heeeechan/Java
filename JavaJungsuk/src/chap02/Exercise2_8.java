@@ -6,12 +6,11 @@ public class Exercise2_8 {
 		int y = 2;
 		int z = 3;
 
-		int temp1 = x;
-		int temp2 = y;
+		int temp = x;
 
-		x = temp2;
+		x = y;
 		y = z;
-		z = temp1;
+		z = temp;
 
 		System.out.println("x=" + x);
 		System.out.println("y=" + y);
