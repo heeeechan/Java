@@ -3,12 +3,8 @@ package chap03;
 public class Exercise3_6 {
 	public static void main(String[] args) {
 		int fahrenheit = 100;
-		float calCelcius = ((float) 5 / 9) * (fahrenheit - 32);
-//		float calCelcius = ((float) 5 / 9) * (fahrenheit - 32) * 1000;
+		float celcius = (int) ((5f / 9) * (fahrenheit - 32) * 100 + 0.5f) / 100f;
 
-		float celcius = calCelcius;
-
-		System.out.println(calCelcius);
 		System.out.println("Fahrenehit:" + fahrenheit);
 		System.out.println("Celcius:" + celcius);
 
