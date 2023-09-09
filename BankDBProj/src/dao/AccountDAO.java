@@ -1,3 +1,5 @@
+package dao;
+
 import java.io.FileInputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,7 +10,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-public class Dao {
+import acc.Account;
+import acc.SpecialAccount;
+
+public class AccountDAO {
 	public static Connection getConnection() {
 		Connection conn = null;
 		try {
@@ -36,7 +41,9 @@ public class Dao {
 				String rname = rs.getString("name");
 				Integer rbalance = rs.getInt("balance");
 				String rgrade = rs.getString("grade");
-				acc = new Account(rid, rname, rbalance, rgrade);
+				if (rgrade == null) {
+					acc = new SpecialAccount(rid, rname, rbalance, rgrade);
+				}
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -53,7 +60,11 @@ public class Dao {
 			pstmt.setString(1, acc.getId());
 			pstmt.setString(2, acc.getName());
 			pstmt.setInt(3, acc.getBalance());
-			pstmt.setString(4, acc.getGrade());
+			if (acc instanceof SpecialAccount) {
+				pstmt.setString(4, ((SpecialAccount) acc).getGrade());
+			} else {
+				pstmt.setString(4, null);
+			}
 			cnt = pstmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -106,7 +117,11 @@ public class Dao {
 					String name = rs.getString(2);
 					Integer balance = rs.getInt(3);
 					String grade = rs.getString(4);
-					accList.add(new Account(id, name, balance, grade));
+					if (grade == null) {
+						accList.add(new Account(id, name, balance));
+					} else {
+						accList.add(new SpecialAccount(id, name, balance, grade));
+					}
 				}
 			}
 		} catch (Exception e) {
