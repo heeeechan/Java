@@ -1,4 +1,5 @@
 import java.sql.Connection;
+import java.util.List;
 import java.util.Scanner;
 
 import acc.Account;
@@ -93,11 +94,11 @@ public class Bank {
 			AccountDAO.close(conn);
 			throw new BankException("계좌오류", BankError.NOID);
 		}
+
 		System.out.print("입금액:");
 		int money = Integer.parseInt(sc.nextLine());
 		acc.deposit(money);
 		AccountDAO.updateAccount(conn, acc);
-
 		AccountDAO.close(conn);
 	}
 
@@ -133,7 +134,13 @@ public class Bank {
 	}
 
 	void allAccountInfo() {
+		Connection conn = AccountDAO.getConnection();
 		System.out.println("[전체 계좌 조회]");
+		List<Account> accs = AccountDAO.selectAccountList(conn);
+		for (Account acc : accs) {
+			System.out.println(acc);
+		}
+		AccountDAO.close(conn);
 	}
 
 	public static void main(String[] args) {
@@ -165,6 +172,7 @@ public class Bank {
 			} catch (NumberFormatException e) {
 				System.out.println("입력형식이 맞지 않습니다. 다시 선택하세요.");
 			} catch (BankException e) {
+				// e.printStackTrace();
 				System.out.println(e);
 			}
 		}
