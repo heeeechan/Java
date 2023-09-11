@@ -42,4 +42,8 @@ public class Team {
 	public String toString() {
 		return String.format("ÆÀ¹øÈ£:%d, ÆÀ¸í:%s, ¿¬°íÁö:%s", num, name, local);
 	}
+
+	public String shortString() {
+		return String.format("%d:%s", num, name);
+	}
 }
