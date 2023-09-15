@@ -11,7 +11,7 @@ abstract class Shape {
 		this.p = p;
 	}
 
-	abstract double calcArea(); // µµÇüÀÇ ¸éÀûÀ» °è»êÇØ¼­ ¹İÈ¯ÇÏ´Â ¸Ş¼­µå
+	abstract double calcArea(); // ë„í˜•ì˜ ë©´ì ì„ ê³„ì‚°í•´ì„œ ë°˜í™˜í•˜ëŠ” ë©”ì„œë“œ
 
 	Point getPosition() {
 		return p;

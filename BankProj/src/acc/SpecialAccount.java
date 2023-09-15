@@ -46,13 +46,13 @@ public class SpecialAccount extends Account {
 
 	@Override
 	public String toString() {
-		return super.toString() + ",µî±Þ:" + grade;
+		return super.toString() + ",ë“±ê¸‰:" + grade;
 	}
 
 	@Override
 	public void deposit(int money) throws BankException {
 		if (money <= 0) {
-			throw new BankException("ÀÔ±Ý¿À·ù", BankError.MINUS);
+			throw new BankException("ìž…ê¸ˆì˜¤ë¥˜", BankError.MINUS);
 		}
 		balance += money * (1 + interest);
 	}

@@ -1,18 +1,24 @@
+
 public class ExceptionTest1 {
+
 	public static void main(String[] args) {
-		String str = "kim";
+		String str = "hong";
 		int[] arr = new int[5];
 		try {
-			System.out.println(str.toString());
-			for (int i = 0; i <= arr.length; i++) {
+			System.out.println(str.toString()); // null인경우 에러. NullPointerExceprion
+			for (int i = 0; i < arr.length; i++) {
 				arr[i] = i * 10;
 			}
 		} catch (NullPointerException e) {
-			// e.printStackTrace();
-			System.out.println(e.getMessage());
+			System.out.println("null 입니다.");
+			System.out.println("예외메세지 : " + e.getMessage());
 		} catch (ArrayIndexOutOfBoundsException e) {
 			System.out.println(e.getMessage());
 		}
-		System.out.println("����");
+
+		System.out.println("종료");
+		// ""이면 아무것도 안찍힘
+		// String은 기본값을 null로 주지말고 "" 로 줘야에러가 안남.
 	}
+
 }

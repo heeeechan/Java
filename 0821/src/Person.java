@@ -1,9 +1,9 @@
 public class Person {
 	String name;
 	int age;
-	
+
 	String info() {
-		//return String.format("ÀÌ¸§:%s, ³ªÀÌ:%d", name, age);
-		return "ÀÌ¸§:" + name + " ³ªÀÌ:" + age;
+		// return String.format("ì´ë¦„:%s, ë‚˜ì´:%d", name, age);
+		return "ì´ë¦„:" + name + " ë‚˜ì´:" + age;
 	}
 }

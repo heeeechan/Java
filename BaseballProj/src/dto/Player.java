@@ -60,6 +60,6 @@ public class Player {
 
 	@Override
 	public String toString() {
-		return String.format("¼±¼ö¹øÈ£:%d, ¼±¼ö¸í:%s, µî¹øÈ£:%d, ¼Ò¼ÓÆÀ:%s", num, name, backnum, teamname);
+		return String.format("ì„ ìˆ˜ë²ˆí˜¸:%d, ì„ ìˆ˜ëª…:%s, ë“±ë²ˆí˜¸:%d, ì†Œì†íŒ€:%s", num, name, backnum, teamname);
 	}
 }

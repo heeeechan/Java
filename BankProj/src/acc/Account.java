@@ -36,22 +36,22 @@ public class Account {
 		name = aname;
 		balance = money;
 	}
-	
+
 	@Override
 	public String toString() {
-		return String.format("°èÁÂ¹øÈ£:%s,ÀÌ¸§:%s,ÀÜ¾×:%d", id, name, balance);
+		return String.format("ê³„ì¢Œë²ˆí˜¸:%s,ì´ë¦„:%s,ì”ì•¡:%d", id, name, balance);
 	}
 
 	public void deposit(int money) throws BankException {
 		if (money <= 0) {
-			throw new BankException("ÀÔ±İ¿À·ù", BankError.MINUS);
+			throw new BankException("ì…ê¸ˆì˜¤ë¥˜", BankError.MINUS);
 		}
 		balance += money;
 	}
 
 	public void withdraw(int money) throws BankException {
 		if (balance < money) {
-			throw new BankException("Ãâ±İ¿À·ù", BankError.LACK);
+			throw new BankException("ì¶œê¸ˆì˜¤ë¥˜", BankError.LACK);
 		}
 		balance -= money;
 	}

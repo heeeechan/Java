@@ -1,20 +1,22 @@
+import java.sql.Connection;
+
 public class AccountMain {
 	public static void main(String[] args) {
-		AccountService service = new AccountService();
-		// °èÁÂ Á¶È¸
-		// service.accountInfo("10004");
+		AccountService accountService = new AccountService();
+		// ê³„ì¢Œê°œì„¤ ì—¬ë¶€ ì¡°íšŒ
+		// accountService.accountInfo("10003");
 
-		// °èÁÂ °³¼³
-		// Account acc = new Account("10004", "¹ÚÈñÂù", 100000, "Gold");
-		// service.makeAccount(acc);
+//		// ê³„ì¢Œ ê°œì„¤
+//		Account acc = new Account("10003", "ë˜ì¹˜", 20000, "Silver");
+//		accountService.makeAccount(acc);
 
-		// ÀÔ±İ
-		// service.deposit("10001", 95000);
+		// ì…ê¸ˆ
+		// accountService.deposit("10003", 50000);
 
-		// Ãâ±İ
-		// service.withdraw("10002", 50000);
+		// ì¶œê¸ˆ
+		// accountService.withdraw("10003", 10000);
 
-		// ÀüÃ¼ °èÁÂ Á¶È¸
-		service.allAccountInfo();
+		// ì „ì²´ê³„ì¢Œì¡°íšŒ
+		accountService.allAccountInfo();
 	}
 }

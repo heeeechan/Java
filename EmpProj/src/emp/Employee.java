@@ -29,7 +29,7 @@ public abstract class Employee {
 	}
 
 	public String info() {
-		return "»ç¹ø:" + id + ",ÀÌ¸§:" + name;
+		return "ì‚¬ë²ˆ:" + id + ",ì´ë¦„:" + name;
 	}
 
 	public abstract int getPay();

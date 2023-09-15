@@ -54,7 +54,7 @@ class Person implements Serializable {
 
 	@Override
 	public String toString() {
-		return String.format("ÀÌ¸§:%s,³ªÀÌ:%d,Å°:%f,°áÈ¥:%s", name, age, height, married ? "Y" : "N");
+		return String.format("ì´ë¦„:%s,ë‚˜ì´:%d,í‚¤:%f,ê²°í˜¼:%s", name, age, height, married ? "Y" : "N");
 	}
 }
 
@@ -112,7 +112,7 @@ public class DataStreamTest1 {
 		try {
 			fos = new FileOutputStream("person.bin");
 			dos = new DataOutputStream(fos);
-			dos.writeInt(pers.size()); // ÀÎ¿ø ¼ö ÀúÀå
+			dos.writeInt(pers.size()); // ì¸ì› ìˆ˜ ì €ì¥
 			for (Person p : pers) {
 				dos.writeUTF(p.name);
 				dos.writeInt(p.age);
@@ -139,7 +139,7 @@ public class DataStreamTest1 {
 		try {
 			fis = new FileInputStream("person.bin");
 			dis = new DataInputStream(fis);
-			int count = dis.readInt(); // ÀÎ¿ø¼ö
+			int count = dis.readInt(); // ì¸ì›ìˆ˜
 			for (int i = 0; i < count; i++) {
 				String name = dis.readUTF();
 				int age = dis.readInt();

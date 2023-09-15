@@ -5,25 +5,23 @@ import emp.Sales;
 public class CompanyMain {
 	public static void main(String[] args) {
 		Company com = new Company();
-		Permanent emp1 = new Permanent(1001, "±èÈñÂù", 5000000);
-		Sales emp2 = new Sales(1002, "È²ÈñÂù", 4000000, 1000000);
-		PartTime emp3 = new PartTime(1003, "¼­ÈñÂù", 160, 30000);
+		Permanent emp1 = new Permanent(1001, "ê¹€í¬ì°¬", 5000000);
+		Sales emp2 = new Sales(1002, "í™©í¬ì°¬", 4000000, 1000000);
+		PartTime emp3 = new PartTime(1003, "ì„œí¬ì°¬", 160, 30000);
 
 		com.enter(emp1);
 		com.enter(emp2);
 		com.enter(emp3);
-		
-		// com.regBusinessTrip(emp1, 1); // error, Permanent ÃâÀå ºÒ°¡´É
-		com.regBusinessTrip(emp2, 2); // Sales ÃâÀå °¡´É, ÇÏ·ç´ç 300000¿ø incentive·Î Áö±Ş
-		com.regBusinessTrip(emp3, 1); // PartTime ÃâÀå °¡´É, (ÃâÀå½Ã°£(1ÀÏ24½Ã°£)*payPerTime)¿ø incentive·Î Áö±Ş
+
+		// com.regBusinessTrip(emp1, 1); // error, Permanent ì¶œì¥ ë¶ˆê°€ëŠ¥
+		com.regBusinessTrip(emp2, 2); // Sales ì¶œì¥ ê°€ëŠ¥, í•˜ë£¨ë‹¹ 300000ì› incentiveë¡œ ì§€ê¸‰
+		com.regBusinessTrip(emp3, 1); // PartTime ì¶œì¥ ê°€ëŠ¥, (ì¶œì¥ì‹œê°„(1ì¼24ì‹œê°„)*payPerTime)ì› incentiveë¡œ ì§€ê¸‰
 
 		com.allEmployeeInfo();
-		System.out.println("ÃÑ±Ş¿©¾×:" + com.getTotalPay());
+		System.out.println("ì´ê¸‰ì—¬ì•¡:" + com.getTotalPay());
 	}
 }
 /*
-»ç¹ø:1001,ÀÌ¸§:±èÈñÂù,±Ş¿©:5000000
-»ç¹ø:1002,ÀÌ¸§:È²ÈñÂù,±Ş¿©:5600000
-»ç¹ø:1003,ÀÌ¸§:¼­ÈñÂù,±Ş¿©:5520000
-ÃÑ±Ş¿©¾×:16120000
-*/
+ * ì‚¬ë²ˆ:1001,ì´ë¦„:ê¹€í¬ì°¬,ê¸‰ì—¬:5000000 ì‚¬ë²ˆ:1002,ì´ë¦„:í™©í¬ì°¬,ê¸‰ì—¬:5600000 ì‚¬ë²ˆ:1003,ì´ë¦„:ì„œí¬ì°¬,ê¸‰ì—¬:5520000
+ * ì´ê¸‰ì—¬ì•¡:16120000
+ */

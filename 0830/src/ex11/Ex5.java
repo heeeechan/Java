@@ -31,11 +31,11 @@ class Human implements Comparable<Human> {
 class Ex5 {
 	public static void main(String[] args) {
 		ArrayList<Human> list = new ArrayList<>();
-		list.add(new Human("000123", "È«±æµ¿", 24, "¼­¿ï½Ã ±İÃµ±¸"));
-		list.add(new Human("931216", "±è±æµ¿", 32, "°æ±âµµ ±¤¸í½Ã"));
-		list.add(new Human("880505", "¹Ú±æµ¿", 37, "¼­¿ï½Ã °­¼­±¸"));
-		list.add(new Human("991101", "Â÷±æµ¿", 27, "°æ±âµµ °úÃµ½Ã"));
-		list.add(new Human("021213", "¾ÈÀÚ¹Ù", 22, "¼­¿ï½Ã ¼ÛÆÄ±¸"));
+		list.add(new Human("000123", "í™ê¸¸ë™", 24, "ì„œìš¸ì‹œ ê¸ˆì²œêµ¬"));
+		list.add(new Human("931216", "ê¹€ê¸¸ë™", 32, "ê²½ê¸°ë„ ê´‘ëª…ì‹œ"));
+		list.add(new Human("880505", "ë°•ê¸¸ë™", 37, "ì„œìš¸ì‹œ ê°•ì„œêµ¬"));
+		list.add(new Human("991101", "ì°¨ê¸¸ë™", 27, "ê²½ê¸°ë„ ê³¼ì²œì‹œ"));
+		list.add(new Human("021213", "ì•ˆìë°”", 22, "ì„œìš¸ì‹œ ì†¡íŒŒêµ¬"));
 		Collections.sort(list);
 		Iterator<Human> it = list.iterator();
 		while (it.hasNext()) {

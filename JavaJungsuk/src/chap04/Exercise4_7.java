@@ -1,6 +1,6 @@
 package chap04;
 
-// ¼ıÀÚ·Î ÀÌ·ç¾îÁø ¹®ÀÚ¿­ strÀÇ °¢ ÀÚ¸®ÀÇ ÇÕÀ» ´õÇÑ °á°ú¸¦ Ãâ·ÂÇÏ´Â ÄÚµå ÀÛ¼º (StringÅ¬·¡½ºÀÇ charAt(int i)) ÀÌ¿ë
+// ìˆ«ìë¡œ ì´ë£¨ì–´ì§„ ë¬¸ìì—´ strì˜ ê° ìë¦¬ì˜ í•©ì„ ë”í•œ ê²°ê³¼ë¥¼ ì¶œë ¥í•˜ëŠ” ì½”ë“œ ì‘ì„± (Stringí´ë˜ìŠ¤ì˜ charAt(int i)) ì´ìš©
 
 public class Exercise4_7 {
 	public static void main(String[] args) {

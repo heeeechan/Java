@@ -2,7 +2,7 @@ import java.util.HashSet;
 
 public class HashSetTest {
 	public static void main(String[] args) {
-		HashSet<Integer> hs = new HashSet<>(); // Áßº¹ Çã¿ë X, Â÷·Ê´ë·Î µé¾î°¡Áö ¾ÊÀ½.
+		HashSet<Integer> hs = new HashSet<>(); // ì¤‘ë³µ í—ˆìš© X, ì°¨ë¡€ëŒ€ë¡œ ë“¤ì–´ê°€ì§€ ì•ŠìŒ.
 		hs.add(234);
 		hs.add(14);
 		hs.add(45);
@@ -14,11 +14,11 @@ public class HashSetTest {
 		}
 
 		HashSet<Person> ahs = new HashSet<>();
-		ahs.add(new Person("¼ÕÈï¹Î", 23));
-		ahs.add(new Person("±è¹ÎÀç", 30));
-		ahs.add(new Person("ÀÌ°­ÀÎ", 33));
-		ahs.add(new Person("Á¶±Ô¼º", 40));
-		ahs.add(new Person("ÀÌ°­ÀÎ", 33));
+		ahs.add(new Person("ì†í¥ë¯¼", 23));
+		ahs.add(new Person("ê¹€ë¯¼ì¬", 30));
+		ahs.add(new Person("ì´ê°•ì¸", 33));
+		ahs.add(new Person("ì¡°ê·œì„±", 40));
+		ahs.add(new Person("ì´ê°•ì¸", 33));
 
 		for (Person p : ahs) {
 			System.out.println(p);

@@ -1,6 +1,6 @@
 package chap04;
 
-// for¹®À» while¹®À¸·Î ¹Ù²Ù±â
+// forë¬¸ì„ whileë¬¸ìœ¼ë¡œ ë°”ê¾¸ê¸°
 /*
 public class Exercise4_5 {
 	public static void main(String[] args) {

@@ -3,7 +3,7 @@ import java.util.StringTokenizer;
 public class StringTokenizerTest {
 
 	public static void main(String[] args) {
-		StringTokenizer st = new StringTokenizer("apple banana orange"); // ±¸ºĞÀÚ¸¦ ¸í½ÃÀûÀ¸·Î ±¸ºĞ °¡´É, ¾ÈÇÏ¸é space·Î ±¸ºĞ
+		StringTokenizer st = new StringTokenizer("apple banana orange"); // êµ¬ë¶„ìë¥¼ ëª…ì‹œì ìœ¼ë¡œ êµ¬ë¶„ ê°€ëŠ¥, ì•ˆí•˜ë©´ spaceë¡œ êµ¬ë¶„
 		System.out.println(st.countTokens());
 		while (st.hasMoreTokens()) {
 			System.out.println(st.nextToken());

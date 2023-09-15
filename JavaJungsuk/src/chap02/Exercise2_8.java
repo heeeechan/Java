@@ -18,4 +18,4 @@ public class Exercise2_8 {
 	}
 }
 
-// x=2, y=3, z=1이 되도록 코드 작성
+// x=2, y=3, z=1

@@ -11,15 +11,17 @@ class Person {
 	}
 
 	String info() {
-		return "ÀÌ¸§:" + name + ",³ªÀÌ:" + age;
+		return "ì´ë¦„:" + name + ",ë‚˜ì´:" + age;
 	}
 }
 
 class Student extends Person {
 	String major;
 	int grade;
-	
-	Student() {}
+
+	Student() {
+	}
+
 	Student(String name, int age, String major, int grade) {
 		this.name = name;
 		this.age = age;
@@ -27,27 +29,27 @@ class Student extends Person {
 		this.grade = grade;
 	}
 
-	@Override // ºÎ¸ğÀÇ ¸Ş¼­µå¸¦ ÀçÁ¤ÀÇ
+	@Override // ë¶€ëª¨ì˜ ë©”ì„œë“œë¥¼ ì¬ì •ì˜
 	String info() {
-		return super.info() + ",Àü°ø:" + major + ",ÇĞ³â:" + grade;
+		return super.info() + ",ì „ê³µ:" + major + ",í•™ë…„:" + grade;
 	}
 }
 
 public class InheritTest1 {
 	public static void main(String[] args) {
 		Student stud1 = new Student();
-		stud1.name = "¿­½ÉÈ÷";
+		stud1.name = "ì—´ì‹¬íˆ";
 		stud1.age = 20;
-		stud1.major = "»ê¾÷°øÇĞ";
+		stud1.major = "ì‚°ì—…ê³µí•™";
 		stud1.grade = 2;
 		System.out.println(stud1.info());
-		
-		Student stud2 = new Student("µ·¸¹Àº", 40, "±İÀ¶", 3);
+
+		Student stud2 = new Student("ëˆë§ì€", 40, "ê¸ˆìœµ", 3);
 
 		Person per1 = new Person();
-		per1.name = "³»·Î³²ºÒ";
+		per1.name = "ë‚´ë¡œë‚¨ë¶ˆ";
 		per1.age = 30;
-		// ºÎ¸ğ´Â ÀÚ½ÄÀ» »ç¿ëÇÒ ¼ö ¾øÀ½(major, grade)
+		// ë¶€ëª¨ëŠ” ìì‹ì„ ì‚¬ìš©í•  ìˆ˜ ì—†ìŒ(major, grade)
 		System.out.println(per1.info());
 	}
 }

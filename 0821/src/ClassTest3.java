@@ -1,22 +1,22 @@
-class TV { //Å¬·¡½º ³» ¼Ó¼º(power, channel, size)´Â Å¬·¡½º ³» ¸Ş¼ÒµåµéÀÌ °øÀ¯ÇÔ.
+class TV { // í´ë˜ìŠ¤ ë‚´ ì†ì„±(power, channel, size)ëŠ” í´ë˜ìŠ¤ ë‚´ ë©”ì†Œë“œë“¤ì´ ê³µìœ í•¨.
 	boolean power;
 	int channel;
 	int size = 50;
-	
+
 	void onOff() {
 		power = !power;
 	}
-	
+
 	void channelUp() {
 		channel++;
 	}
-	
+
 	void channelDown() {
 		channel--;
 	}
-	
+
 	String info() {
-		return String.format("size:%d, channel:%d, power:%s", size, channel, (power)?"on":"off");
+		return String.format("size:%d, channel:%d, power:%s", size, channel, (power) ? "on" : "off");
 	}
 }
 

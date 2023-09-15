@@ -6,8 +6,8 @@ class Ex12 {
 	public static void main(String args[]) throws Exception {
 		SutdaDeck deck = new SutdaDeck();
 		deck.shuffle();
-		Player p1 = new Player("Å¸Â¥", deck.pick(), deck.pick());
-		Player p2 = new Player("°í¼ö", deck.pick(), deck.pick());
+		Player p1 = new Player("íƒ€ì§œ", deck.pick(), deck.pick());
+		Player p2 = new Player("ê³ ìˆ˜", deck.pick(), deck.pick());
 		System.out.println(p1 + " " + deck.getPoint(p1));
 		System.out.println(p2 + " " + deck.getPoint(p2));
 	}
@@ -16,8 +16,8 @@ class Ex12 {
 class SutdaDeck {
 	final int CARD_NUM = 20;
 	SutdaCard[] cards = new SutdaCard[CARD_NUM];
-	int pos = 0; // ´ÙÀ½¿¡ °¡Á®¿Ã Ä«µåÀÇ À§Ä¡
-	HashMap<String, Integer> jokbo = new HashMap<>(); // Á·º¸¸¦ ÀúÀåÇÒ HashMap
+	int pos = 0; // ë‹¤ìŒì— ê°€ì ¸ì˜¬ ì¹´ë“œì˜ ìœ„ì¹˜
+	HashMap<String, Integer> jokbo = new HashMap<>(); // ì¡±ë³´ë¥¼ ì €ì¥í•  HashMap
 
 	SutdaDeck() {
 		for (int i = 0; i < cards.length; i++) {
@@ -25,7 +25,7 @@ class SutdaDeck {
 			boolean isKwang = i < 10 && (num == 1 || num == 3 || num == 8);
 			cards[i] = new SutdaCard(num, isKwang);
 		}
-		registerJokbo(); // Á·º¸¸¦ µî·ÏÇÑ´Ù.
+		registerJokbo(); // ì¡±ë³´ë¥¼ ë“±ë¡í•œë‹¤.
 	}
 
 	void registerJokbo() {
@@ -61,12 +61,9 @@ class SutdaDeck {
 		SutdaCard c2 = p.c2;
 		Integer result = 0;
 		/*
-		(2) ¾Æ·¡ÀÇ ·ÎÁ÷¿¡ ¸Â°Ô ÄÚµå¸¦ ÀÛ¼ºÇÏ½Ã¿À.
-		1. Ä«µå µÎ ÀåÀÌ ¸ğµÎ ±¤ÀÌ¸é, jokbo¿¡¼­ Å°¸¦ "KK"·Î ÇØ¼­ Á¡¼ö¸¦ Á¶È¸ÇÑ´Ù.
-		2. µÎ Ä«µåÀÇ ¼ıÀÚ(num)·Î jokbo¿¡¼­ µî±ŞÀ» Á¶È¸ÇÑ´Ù.
-		3. ÇØ´çÇÏ´Â µî±ŞÀÌ ¾øÀ¸¸é, ¾Æ·¡ÀÇ °ø½ÄÀ¸·Î Á¡¼ö¸¦ °è»êÇÑ´Ù.
-		(c1.num + c2.num) % 10 + 1000
-		4. PlayerÀÇ Á¡¼ö(point)¿¡ °è»êÇÑ °ªÀ» ÀúÀåÇÑ´Ù.
+		 * (2) ì•„ë˜ì˜ ë¡œì§ì— ë§ê²Œ ì½”ë“œë¥¼ ì‘ì„±í•˜ì‹œì˜¤. 1. ì¹´ë“œ ë‘ ì¥ì´ ëª¨ë‘ ê´‘ì´ë©´, jokboì—ì„œ í‚¤ë¥¼ "KK"ë¡œ í•´ì„œ ì ìˆ˜ë¥¼ ì¡°íšŒí•œë‹¤. 2.
+		 * ë‘ ì¹´ë“œì˜ ìˆ«ì(num)ë¡œ jokboì—ì„œ ë“±ê¸‰ì„ ì¡°íšŒí•œë‹¤. 3. í•´ë‹¹í•˜ëŠ” ë“±ê¸‰ì´ ì—†ìœ¼ë©´, ì•„ë˜ì˜ ê³µì‹ìœ¼ë¡œ ì ìˆ˜ë¥¼ ê³„ì‚°í•œë‹¤. (c1.num
+		 * + c2.num) % 10 + 1000 4. Playerì˜ ì ìˆ˜(point)ì— ê³„ì‚°í•œ ê°’ì„ ì €ì¥í•œë‹¤.
 		 */
 		if (c1.isKwang && c2.isKwang) { // 1
 			result = jokbo.get("KK");
@@ -88,7 +85,7 @@ class SutdaDeck {
 			c = cards[pos];
 			cards[pos++] = null;
 		} else {
-			throw new Exception("³²¾ÆÀÖ´Â Ä«µå°¡ ¾ø½À´Ï´Ù.");
+			throw new Exception("ë‚¨ì•„ìˆëŠ” ì¹´ë“œê°€ ì—†ìŠµë‹ˆë‹¤.");
 		}
 		return c;
 	}
@@ -108,7 +105,7 @@ class Player {
 	String name;
 	SutdaCard c1;
 	SutdaCard c2;
-	int point; // Ä«µåÀÇ µî±Ş¿¡ µû¸¥ Á¡¼ö - »õ·Î Ãß°¡
+	int point; // ì¹´ë“œì˜ ë“±ê¸‰ì— ë”°ë¥¸ ì ìˆ˜ - ìƒˆë¡œ ì¶”ê°€
 
 	Player(String name, SutdaCard c1, SutdaCard c2) {
 		this.name = name;

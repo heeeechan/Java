@@ -7,26 +7,26 @@ public class Ex4_20 {
 		int menu = 0, num = 0;
 		Scanner scanner = new Scanner(System.in);
 
-		outer: // while¹®¿¡ outer ¶ó´Â ÀÌ¸§À» ºÙÀÎ´Ù.
+		outer: // whileë¬¸ì— outer ë¼ëŠ” ì´ë¦„ì„ ë¶™ì¸ë‹¤.
 		while (true) {
 			System.out.println("(1) square");
 			System.out.println("(2) square root");
 			System.out.println("(3) log");
-			System.out.print("¿øÇÏ´Â ¸Ş´º(1~3)¸¦ ¼±ÅÃÇÏ¼¼¿ä.(Á¾·á:0)>");
+			System.out.print("ì›í•˜ëŠ” ë©”ë‰´(1~3)ë¥¼ ì„ íƒí•˜ì„¸ìš”.(ì¢…ë£Œ:0)>");
 
 			String tmp = scanner.nextLine();
 			menu = Integer.parseInt(tmp);
 
 			if (menu == 0) {
-				System.out.println("ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");
+				System.out.println("í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 				break;
 			} else if (!(1 <= menu && menu <= 3)) {
-				System.out.println("¸Ş´º¸¦ Àß¸ø ¼±ÅÃÇÏ¼Ì½À´Ï´Ù.(Á¾·á´Â 0)");
+				System.out.println("ë©”ë‰´ë¥¼ ì˜ëª» ì„ íƒí•˜ì…¨ìŠµë‹ˆë‹¤.(ì¢…ë£ŒëŠ” 0)");
 				continue;
 			}
 
 			for (;;) {
-				System.out.println("°è»êÇÒ °ªÀ» ÀÔ·ÂÇÏ¼¼¿ä.(°è»ê Á¾·á:0, ÀüÃ¼ Á¾·á:99)>");
+				System.out.println("ê³„ì‚°í•  ê°’ì„ ì…ë ¥í•˜ì„¸ìš”.(ê³„ì‚° ì¢…ë£Œ:0, ì „ì²´ ì¢…ë£Œ:99)>");
 				tmp = scanner.nextLine();
 				num = Integer.parseInt(tmp);
 
@@ -49,7 +49,7 @@ public class Ex4_20 {
 					System.out.println("result=" + Math.log(num));
 					break;
 				}
-			} // for(;;) ³¡
-		} // while ³¡
+			} // for(;;) ë
+		} // while ë
 	}
 }

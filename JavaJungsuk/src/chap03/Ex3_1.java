@@ -4,7 +4,7 @@ public class Ex3_1 {
 	public static void main(String[] args) {
 		int x, y;
 
-		x = y = 3; // y¿¡ 3 ÀúÀå ÈÄ x¿¡ 3ÀÌ ÀúÀå
+		x = y = 3; // yì— 3ì´ ì €ì¥ëœ í›„ì— xì— 3ì´ ì €ì¥ëœë‹¤.
 		System.out.println("x=" + x);
 		System.out.println("y=" + y);
 	}

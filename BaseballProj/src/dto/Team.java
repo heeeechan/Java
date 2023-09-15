@@ -6,6 +6,7 @@ public class Team {
 	private String local;
 
 	public Team() {
+
 	}
 
 	public Team(Integer num, String name, String local) {
@@ -40,7 +41,7 @@ public class Team {
 
 	@Override
 	public String toString() {
-		return String.format("ÆÀ¹øÈ£:%d, ÆÀ¸í:%s, ¿¬°íÁö:%s", num, name, local);
+		return String.format("íŒ€ë²ˆí˜¸:%d, íŒ€ëª…:%s, ì—°ê³ ì§€:%s", num, name, local);
 	}
 
 	public String shortString() {

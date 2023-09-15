@@ -26,18 +26,18 @@ class Robot {
 
 class DanceRobot extends Robot {
 	void dance() {
-		System.out.println("ÃãÀ» Ãä´Ï´Ù.");
+		System.out.println("ì¶¤ì„ ì¶¥ë‹ˆë‹¤.");
 	}
 }
 
 class SingRobot extends Robot {
 	void sing() {
-		System.out.println("³ë·¡¸¦ ÇÕ´Ï´Ù.");
+		System.out.println("ë…¸ë˜ë¥¼ í•©ë‹ˆë‹¤.");
 	}
 }
 
 class DrawRobot extends Robot {
 	void draw() {
-		System.out.println("±×¸²À» ±×¸³´Ï´Ù.");
+		System.out.println("ê·¸ë¦¼ì„ ê·¸ë¦½ë‹ˆë‹¤.");
 	}
 }

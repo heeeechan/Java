@@ -35,9 +35,9 @@ public class PartTime extends Employee implements IBusinessTrip {
 
 	@Override
 	public String info() {
-		return super.info() + ",�޿�:" + getPay();
+		return super.info() + ",보너스:" + getPay();
 	}
-	
+
 	@Override
 	public void goBusinessTrip(int day) {
 		time += (day * 24);

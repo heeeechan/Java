@@ -5,7 +5,7 @@ public class Ex4_1 {
 		int score = 80;
 
 		if (score > 60) {
-			System.out.println("�հ��Դϴ�.");
+			System.out.println("합격입니다.");
 		}
 	}
 }

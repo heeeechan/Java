@@ -4,38 +4,40 @@ class Number {
 
 	void imethod() {
 		inum = 10;
-		snum++; // instance ¸Ş¼­µå¿¡¼­´Â static º¯¼ö »ç¿ë °¡´É
+		snum++; // instance ë©”ì„œë“œì—ì„œëŠ” static ë³€ìˆ˜ ì‚¬ìš© ê°€ëŠ¥
 		imethod2();
-		smethod(); // instance ¸Ş¼­µå¿¡¼­´Â static ¸Ş¼­µå È£Ãâ °¡´É
+		smethod(); // instance ë©”ì„œë“œì—ì„œëŠ” static ë©”ì„œë“œ í˜¸ì¶œ ê°€ëŠ¥
 	}
+
 	void imethod2() {
-		
+
 	}
-	
+
 	static void smethod() {
 		snum = 100;
-		// inum = 10; static method¿¡¼­´Â instance º¯¼ö »ç¿ë ºÒ°¡
+		// inum = 10; static methodì—ì„œëŠ” instance ë³€ìˆ˜ ì‚¬ìš© ë¶ˆê°€
 		smethod2();
-		//imethod(); static ¸Ş¼­µå¿¡¼­´Â instance ¸Ş¼­µå È£Ãâ ºÒ°¡
+		// imethod(); static ë©”ì„œë“œì—ì„œëŠ” instance ë©”ì„œë“œ í˜¸ì¶œ ë¶ˆê°€
 	}
+
 	static void smethod2() {
-		
+
 	}
 }
 
 public class StaticTest1 {
 	public static void main(String[] args) {
-		//static(class) º¯¼ö´Â °´Ã¼ »ı¼º¾øÀÌ »ç¿ë °¡´É
+		// static(class) ë³€ìˆ˜ëŠ” ê°ì²´ ìƒì„±ì—†ì´ ì‚¬ìš© ê°€ëŠ¥
 		System.out.println(Number.snum);
 		Number.smethod();
-		
-		//instance º¯¼ö, ¸Ş¼­µå´Â´Â °´Ã¼ »ı¼ºÇØ¾ß¸¸ »ç¿ë °¡´É
-		//System.out.println(Number.inum);
-		//Number.imethod();
-		
+
+		// instance ë³€ìˆ˜, ë©”ì„œë“œëŠ”ëŠ” ê°ì²´ ìƒì„±í•´ì•¼ë§Œ ì‚¬ìš© ê°€ëŠ¥
+		// System.out.println(Number.inum);
+		// Number.imethod();
+
 		Number n = new Number();
 		System.out.println(n.inum);
-		System.out.println(n.snum); // static º¯¼ö´Â ·¹ÆÛ·±½º¸¦ ÅëÇØ¼­µµ Á¢±Ù °¡´É
+		System.out.println(n.snum); // static ë³€ìˆ˜ëŠ” ë ˆí¼ëŸ°ìŠ¤ë¥¼ í†µí•´ì„œë„ ì ‘ê·¼ ê°€ëŠ¥
 		n.imethod();
 		n.smethod();
 	}

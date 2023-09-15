@@ -49,11 +49,11 @@ class BanNoAscending implements Comparator<Person> {
 class Ex7 {
 	public static void main(String[] args) {
 		ArrayList list = new ArrayList();
-		list.add(new Person("ÀÌÀÚ¹Ù", 2, 1, 70, 90, 70));
-		list.add(new Person("¾ÈÀÚ¹Ù", 2, 2, 60, 100, 80));
-		list.add(new Person("È«±æµ¿", 1, 3, 100, 100, 100));
-		list.add(new Person("³²±Ã¼º", 1, 1, 90, 70, 80));
-		list.add(new Person("±èÀÚ¹Ù", 1, 2, 80, 80, 90));
+		list.add(new Person("ì´ìë°”", 2, 1, 70, 90, 70));
+		list.add(new Person("ì•ˆìë°”", 2, 2, 60, 100, 80));
+		list.add(new Person("í™ê¸¸ë™", 1, 3, 100, 100, 100));
+		list.add(new Person("ë‚¨ê¶ì„±", 1, 1, 90, 70, 80));
+		list.add(new Person("ê¹€ìë°”", 1, 2, 80, 80, 90));
 		Collections.sort(list, new BanNoAscending());
 		Iterator it = list.iterator();
 		while (it.hasNext())

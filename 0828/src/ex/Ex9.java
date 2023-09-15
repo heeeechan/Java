@@ -21,14 +21,14 @@ class UnsupportedFunctionException extends RuntimeException {
 	public String getMessage() {
 		return "[" + ERR_CODE + "]" + super.getMessage();
 	}
+}
 
-	public class Ex9 {
-		public static void main(String[] args) {
-			try {
-				throw new UnsupportedFunctionException("Áö¿øÇÏÁö ¾Ê´Â ±â´ÉÀÔ´Ï´Ù.", 100);
-			} catch (UnsupportedFunctionException e) {
-				System.out.println(e.getMessage());
-			}
+public class Ex9 {
+	public static void main(String[] args) {
+		try {
+			throw new UnsupportedFunctionException("ì§€ì›í•˜ì§€ ì•ŠëŠ” ê¸°ëŠ¥ì…ë‹ˆë‹¤.", 100);
+		} catch (UnsupportedFunctionException e) {
+			System.out.println(e.getMessage());
 		}
 	}
 }

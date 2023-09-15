@@ -32,7 +32,7 @@ public class Account {
 		this.balance = balance;
 	}
 
-	// »ı¼ºÀÚ
+	// ìƒì„±ì
 	public Account() {
 	}
 
@@ -42,24 +42,24 @@ public class Account {
 		this.balance = money;
 	}
 
-	// ¸Ş¼Òµå
+	// ë©”ì†Œë“œ
 	@Override
 	public String toString() {
-		return String.format("°èÁÂ¹øÈ£:%s,ÀÌ¸§:%s,ÀÜ¾×:%d", id, name, balance);
+		return String.format("ê³„ì¢Œë²ˆí˜¸:%s,ì´ë¦„:%s,ì”ì•¡:%d", id, name, balance);
 	}
 
-	// ¿¹¿ÜÃ³¸®
+	// ì˜ˆì™¸ì²˜ë¦¬
 	public void deposit(int money) throws BankException {
 		if (money <= 0) {
-			throw new BankException("ÀÔ±İ¿À·ù", BankError.MINUS);
+			throw new BankException("ì…ê¸ˆì˜¤ë¥˜", BankError.MINUS);
 		}
 		balance += money;
 	}
 
-	// ¿¹¿ÜÃ³¸®
+	// ì˜ˆì™¸ì²˜ë¦¬
 	public void withdraw(int money) throws BankException {
 		if (balance < money) {
-			throw new BankException("Ãâ±İ¿À·ù", BankError.LACK);
+			throw new BankException("ì¶œê¸ˆì˜¤ë¥˜", BankError.LACK);
 		}
 		balance -= money;
 	}

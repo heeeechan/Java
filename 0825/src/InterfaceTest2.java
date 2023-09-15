@@ -1,6 +1,6 @@
 class MyButton {
 	String title;
-	
+
 	public String getTitle() {
 		return title;
 	}
@@ -10,7 +10,7 @@ class MyButton {
 	}
 
 	void click() {
-		System.out.println("±âº» ¹öÆ° Å¬¸¯");
+		System.out.println("ê¸°ë³¸ ë²„íŠ¼ í´ë¦­");
 	}
 }
 
@@ -18,14 +18,14 @@ class LoginButton extends MyButton {
 	@Override
 	void click() {
 		super.click();
-		System.out.println("·Î±×ÀÎ Ã³¸®");
+		System.out.println("ë¡œê·¸ì¸ ì²˜ë¦¬");
 	}
 }
 
 public class InterfaceTest2 {
 	public static void main(String[] args) {
 		MyButton loginBtn = new LoginButton();
-		loginBtn.setTitle("·Î±×ÀÎ");
+		loginBtn.setTitle("ë¡œê·¸ì¸");
 		loginBtn.click();
 	}
 }

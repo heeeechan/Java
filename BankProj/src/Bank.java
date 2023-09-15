@@ -23,26 +23,26 @@ public class Bank {
 	Scanner sc = new Scanner(System.in);
 
 	int menu() throws BankException {
-		System.out.println("[ÄÚ½ºÅ¸ ÀºÇà]");
-		System.out.println("1. °èÁÂ°³¼³");
-		System.out.println("2. ÀÔ±İ");
-		System.out.println("3. Ãâ±İ");
-		System.out.println("4. °èÁÂÁ¶È¸");
-		System.out.println("5. ÀüÃ¼°èÁÂÁ¶È¸");
-		System.out.println("0. Á¾·á");
-		System.out.print("¼±ÅÃ>>");
+		System.out.println("[ì½”ìŠ¤íƒ€ ì€í–‰]");
+		System.out.println("1. ê³„ì¢Œê°œì„¤");
+		System.out.println("2. ì…ê¸ˆ");
+		System.out.println("3. ì¶œê¸ˆ");
+		System.out.println("4. ê³„ì¢Œì¡°íšŒ");
+		System.out.println("5. ì „ì²´ê³„ì¢Œì¡°íšŒ");
+		System.out.println("0. ì¢…ë£Œ");
+		System.out.print("ì„ íƒ>>");
 		int sel = Integer.parseInt(sc.nextLine());
 		if (!(sel >= 0 && sel <= 5)) {
-			throw new BankException("¸Ş´º¿À·ù", BankError.MENU);
+			throw new BankException("ë©”ë‰´ì˜¤ë¥˜", BankError.MENU);
 		}
 		return sel;
 	}
 
 	void selAccMenu() throws BankException {
-		System.out.println("[°èÁÂ°³¼³]");
-		System.out.println("1.ÀÏ¹İ°èÁÂ");
-		System.out.println("2.Æ¯¼ö°èÁÂ");
-		System.out.print("¼±ÅÃ>>");
+		System.out.println("[ê³„ì¢Œê°œì„¤]");
+		System.out.println("1.ì¼ë°˜ê³„ì¢Œ");
+		System.out.println("2.íŠ¹ìˆ˜ê³„ì¢Œ");
+		System.out.print("ì„ íƒ>>");
 		int sel = Integer.parseInt(sc.nextLine());
 		switch (sel) {
 		case 1:
@@ -52,77 +52,77 @@ public class Bank {
 			makeSpecialAccount();
 			break;
 		default:
-			throw new BankException("¸Ş´º¿À·ù", BankError.MENU);
+			throw new BankException("ë©”ë‰´ì˜¤ë¥˜", BankError.MENU);
 		}
 	}
 
 	void makeAccount() throws BankException {
-		System.out.println("[ÀÏ¹İ°èÁÂ °³¼³]");
-		System.out.print("°èÁÂ¹øÈ£:");
+		System.out.println("[ì¼ë°˜ê³„ì¢Œ ê°œì„¤]");
+		System.out.print("ê³„ì¢Œë²ˆí˜¸:");
 		String id = sc.nextLine();
 		if (!accs.containsKey(id)) {
-			throw new BankException("°èÁÂ¿À·ù", BankError.EXISTID);
+			throw new BankException("ê³„ì¢Œì˜¤ë¥˜", BankError.EXISTID);
 		}
-		System.out.print("ÀÌ¸§:");
+		System.out.print("ì´ë¦„:");
 		String name = sc.nextLine();
-		System.out.print("ÀÔ±İ¾×:");
+		System.out.print("ì…ê¸ˆì•¡:");
 		int money = Integer.parseInt(sc.nextLine());
 //		accs.add(new Account(id, name, money));
 		accs.put(id, new Account(id, name, money));
 	}
 
 	void makeSpecialAccount() throws BankException {
-		System.out.println("[Æ¯¼ö°èÁÂ °³¼³]");
-		System.out.print("°èÁÂ¹øÈ£:");
+		System.out.println("[íŠ¹ìˆ˜ê³„ì¢Œ ê°œì„¤]");
+		System.out.print("ê³„ì¢Œë²ˆí˜¸:");
 		String id = sc.nextLine();
 		if (!accs.containsKey(id)) {
-			throw new BankException("°èÁÂ¿À·ù", BankError.EXISTID);
+			throw new BankException("ê³„ì¢Œì˜¤ë¥˜", BankError.EXISTID);
 		}
-		System.out.print("ÀÌ¸§:");
+		System.out.print("ì´ë¦„:");
 		String name = sc.nextLine();
-		System.out.print("ÀÔ±İ¾×:");
+		System.out.print("ì…ê¸ˆì•¡:");
 		int money = Integer.parseInt(sc.nextLine());
-		System.out.print("µî±Ş(VIP-V,Gold-G,Silver-S,Normal-N):");
+		System.out.print("ë“±ê¸‰(VIP-V,Gold-G,Silver-S,Normal-N):");
 		String grade = sc.nextLine();
-		// Ãß°¡
+		// ì¶”ê°€
 		accs.put(id, new SpecialAccount(id, name, money, grade));
 	}
 
 	void deposit() throws BankException {
-		System.out.println("[ÀÔ±İ]");
-		System.out.print("°èÁÂ¹øÈ£:");
+		System.out.println("[ì…ê¸ˆ]");
+		System.out.print("ê³„ì¢Œë²ˆí˜¸:");
 		String id = sc.nextLine();
 		if (!accs.containsKey(id)) {
-			throw new BankException("°èÁÂ¿À·ù", BankError.NOID);
+			throw new BankException("ê³„ì¢Œì˜¤ë¥˜", BankError.NOID);
 		}
-		System.out.print("ÀÔ±İ¾×:");
+		System.out.print("ì…ê¸ˆì•¡:");
 		int money = Integer.parseInt(sc.nextLine());
 		accs.get(id).deposit(money);
 	}
 
 	void withdraw() throws BankException {
-		System.out.println("[Ãâ±İ]");
-		System.out.print("°èÁÂ¹øÈ£:");
+		System.out.println("[ì¶œê¸ˆ]");
+		System.out.print("ê³„ì¢Œë²ˆí˜¸:");
 		String id = sc.nextLine();
 		if (!accs.containsKey(id)) {
-			throw new BankException("°èÁÂ¿À·ù", BankError.NOID);
+			throw new BankException("ê³„ì¢Œì˜¤ë¥˜", BankError.NOID);
 		}
-		System.out.print("Ãâ±İ¾×:");
+		System.out.print("ì¶œê¸ˆì•¡:");
 		int money = Integer.parseInt(sc.nextLine());
 		accs.get(id).withdraw(money);
 	}
 
 	void accountInfo() throws BankException {
-		System.out.println("[°èÁÂÁ¶È¸]");
-		System.out.print("°èÁÂ¹øÈ£:");
+		System.out.println("[ê³„ì¢Œì¡°íšŒ]");
+		System.out.print("ê³„ì¢Œë²ˆí˜¸:");
 		String id = sc.nextLine();
 		if (!accs.containsKey(id))
-			throw new BankException("°èÁÂ¿À·ù", BankError.NOID);
+			throw new BankException("ê³„ì¢Œì˜¤ë¥˜", BankError.NOID);
 		System.out.println(accs.get(id));
 	}
 
 	void allAccountInfo() {
-		System.out.println("[ÀüÃ¼ °èÁÂ Á¶È¸]");
+		System.out.println("[ì „ì²´ ê³„ì¢Œ ì¡°íšŒ]");
 		Iterator<Account> it = accs.values().iterator();
 		while (it.hasNext()) {
 			System.out.println(it.next());
@@ -133,20 +133,20 @@ public class Bank {
 		DataOutputStream dao = null;
 		try {
 			dao = new DataOutputStream(new FileOutputStream("accs.bin"));
-			dao.writeInt(accs.size()); // °èÁÂ °³¼ö ÀúÀå
+			dao.writeInt(accs.size()); // ê³„ì¢Œ ê°œìˆ˜ ì €ì¥
 			for (Account acc : accs.values()) {
-				if (accs instanceof SpecialAccount) { // °èÁÂ Á¾·ù ±¸ºĞ°ª
+				if (accs instanceof SpecialAccount) { // ê³„ì¢Œ ì¢…ë¥˜ êµ¬ë¶„ê°’
 					dao.writeChar('S');
 				} else {
 					dao.writeChar('N');
 				}
-				dao.writeUTF(acc.getId()); // °èÁÂ¹øÈ£
-				dao.writeUTF(acc.getName()); // ÀÌ¸§
-				dao.writeInt(acc.getBalance()); // ÀÜ¾×
+				dao.writeUTF(acc.getId()); // ê³„ì¢Œë²ˆí˜¸
+				dao.writeUTF(acc.getName()); // ì´ë¦„
+				dao.writeInt(acc.getBalance()); // ì”ì•¡
 				if (acc instanceof SpecialAccount) {
 //					SpecialAccount sacc = (SpecialAccount) acc;
 //					dao.writeUTF(sacc.getGrade());
-					dao.writeUTF(((SpecialAccount) acc).getGrade().charAt(0) + ""); // µî±Ş
+					dao.writeUTF(((SpecialAccount) acc).getGrade().charAt(0) + ""); // ë“±ê¸‰
 				}
 			}
 		} catch (IOException e) {
@@ -230,14 +230,14 @@ public class Bank {
 		DataInputStream dis = null;
 		try {
 			dis = new DataInputStream(new FileInputStream("accs.bin"));
-			int count = dis.readInt(); // °èÁÂ °³¼ö
+			int count = dis.readInt(); // ê³„ì¢Œ ê°œìˆ˜
 			for (int i = 0; i < count; i++) {
-				char sect = dis.readChar(); // °èÁÂ Á¾·ù ±¸ºĞ°ª
-				String id = dis.readUTF(); // °èÁÂ¹øÈ£
-				String name = dis.readUTF(); // ÀÌ¸§
-				int balance = dis.readInt(); // ÀÜ¾×
+				char sect = dis.readChar(); // ê³„ì¢Œ ì¢…ë¥˜ êµ¬ë¶„ê°’
+				String id = dis.readUTF(); // ê³„ì¢Œë²ˆí˜¸
+				String name = dis.readUTF(); // ì´ë¦„
+				int balance = dis.readInt(); // ì”ì•¡
 				if (sect == 'S') {
-					String grade = dis.readUTF(); // µî±Ş
+					String grade = dis.readUTF(); // ë“±ê¸‰
 					accs.put(id, new SpecialAccount(id, name, balance, grade));
 				} else {
 					accs.put(id, new Account(id, name, balance));
@@ -292,7 +292,7 @@ public class Bank {
 					break;
 				}
 			} catch (NumberFormatException e) {
-				System.out.println("ÀÔ·ÂÇü½ÄÀÌ ¸ÂÁö ¾Ê½À´Ï´Ù. ´Ù½Ã ¼±ÅÃÇÏ¼¼¿ä.");
+				System.out.println("ì…ë ¥í˜•ì‹ì´ ë§ì§€ ì•ŠìŠµë‹ˆë‹¤. ë‹¤ì‹œ ì„ íƒí•˜ì„¸ìš”.");
 			} catch (BankException e) {
 				System.out.println(e);
 			}

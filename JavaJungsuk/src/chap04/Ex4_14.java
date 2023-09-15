@@ -5,18 +5,18 @@ import java.util.Scanner;
 public class Ex4_14 {
 	public static void main(String[] args) {
 		int num = 0, sum = 0;
-		System.out.print("¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.(¿¹:12345)>");
+		System.out.print("ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”.(ì˜ˆ:12345)>");
 
 		Scanner scanner = new Scanner(System.in);
 		String tmp = scanner.nextLine();
 		num = Integer.parseInt(tmp);
 
 		while (num != 0) {
-			sum += num % 10; // numÀ» 10À¸·Î ³ª´« ³ª¸ÓÁö¸¦ sum¿¡ ´õÇÔ
+			sum += num % 10; // numì„ 10ìœ¼ë¡œ ë‚˜ëˆˆ ë‚˜ë¨¸ì§€ë¥¼ sumì— ë”í•¨
 			System.out.printf("sum=%3d num%d%n", sum, num);
 
-			num /= 10; // num = num / 10; numÀ» 10À¸·Î ³ª´« °ªÀ» ´Ù½Ã num¿¡ ÀúÀå
+			num /= 10; // num = num / 10; numì„ 10ìœ¼ë¡œ ë‚˜ëˆˆ ê°’ì„ ë‹¤ì‹œ numì— ì €ì¥
 		}
-		System.out.println("°¢ ÀÚ¸®¼öÀÇ ÇÕ:" + sum);
+		System.out.println("ê° ìë¦¬ìˆ˜ì˜ í•©:" + sum);
 	}
 }

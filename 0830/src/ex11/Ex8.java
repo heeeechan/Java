@@ -12,8 +12,8 @@ class UnivStudent implements Comparable<UnivStudent> {
 	int kor;
 	int eng;
 	int math;
-	int total; // ÃÑÁ¡
-	int schoolRank; // Àü±³µî¼ö
+	int total; // ì´ì 
+	int schoolRank; // ì „êµë“±ìˆ˜
 
 	UnivStudent(String name, int ban, int no, int kor, int eng, int math) {
 		this.name = name;
@@ -40,16 +40,16 @@ class UnivStudent implements Comparable<UnivStudent> {
 
 	public String toString() {
 		return name + "," + ban + "," + no + "," + kor + "," + eng + "," + math + "," + getTotal() + "," + getAverage()
-				+ "," + schoolRank // »õ·ÎÃß°¡
+				+ "," + schoolRank // ìƒˆë¡œì¶”ê°€
 		;
 	}
 }
 
 class Ex8 {
 	public static void calculateSchoolRank(List<UnivStudent> list) {
-		Collections.sort(list); // ¸ÕÀú list¸¦ ÃÑÁ¡±âÁØ ³»¸²Â÷¼øÀ¸·Î Á¤·ÄÇÑ´Ù.
-		int prevRank = -1; // ÀÌÀü Àü±³µî¼ö
-		int prevTotal = -1; // ÀÌÀü ÃÑÁ¡
+		Collections.sort(list); // ë¨¼ì € listë¥¼ ì´ì ê¸°ì¤€ ë‚´ë¦¼ì°¨ìˆœìœ¼ë¡œ ì •ë ¬í•œë‹¤.
+		int prevRank = -1; // ì´ì „ ì „êµë“±ìˆ˜
+		int prevTotal = -1; // ì´ì „ ì´ì 
 		int length = list.size();
 		for (int i = 0; i < length; i++) {
 			UnivStudent currUnivStudent = list.get(i);
@@ -62,16 +62,16 @@ class Ex8 {
 			prevTotal = currUnivStudent.total;
 		}
 
-		Collections.sort(list, (s1, s2) -> s1.schoolRank - s2.schoolRank); // Àü±³µî¼ö¸¦ ±âÁØÀ¸·Î ¿À¸§Â÷¼ø Á¤·Ä
+		Collections.sort(list, (s1, s2) -> s1.schoolRank - s2.schoolRank); // ì „êµë“±ìˆ˜ë¥¼ ê¸°ì¤€ìœ¼ë¡œ ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬
 	}
 
 	public static void main(String[] args) {
 		ArrayList<UnivStudent> list = new ArrayList<>();
-		list.add(new UnivStudent("ÀÌÀÚ¹Ù", 2, 1, 70, 90, 70));
-		list.add(new UnivStudent("¾ÈÀÚ¹Ù", 2, 2, 60, 100, 80));
-		list.add(new UnivStudent("È«±æµ¿", 1, 3, 100, 100, 100));
-		list.add(new UnivStudent("³²±Ã¼º", 1, 1, 90, 70, 80));
-		list.add(new UnivStudent("±èÀÚ¹Ù", 1, 2, 80, 80, 90));
+		list.add(new UnivStudent("ì´ìë°”", 2, 1, 70, 90, 70));
+		list.add(new UnivStudent("ì•ˆìë°”", 2, 2, 60, 100, 80));
+		list.add(new UnivStudent("í™ê¸¸ë™", 1, 3, 100, 100, 100));
+		list.add(new UnivStudent("ë‚¨ê¶ì„±", 1, 1, 90, 70, 80));
+		list.add(new UnivStudent("ê¹€ìë°”", 1, 2, 80, 80, 90));
 		calculateSchoolRank(list);
 		Iterator<UnivStudent> it = list.iterator();
 		while (it.hasNext())

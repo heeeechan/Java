@@ -12,7 +12,7 @@ class Ex10 {
 			numberList.add(i);
 		}
 
-		Collections.shuffle(numberList); // ¼ıÀÚ ¸®½ºÆ®¸¦ ·£´ıÇÏ°Ô ¼¯À½
+		Collections.shuffle(numberList); // ìˆ«ì ë¦¬ìŠ¤íŠ¸ë¥¼ ëœë¤í•˜ê²Œ ì„ìŒ
 
 		int[][] board = new int[5][5];
 		Iterator<Integer> it = numberList.iterator();

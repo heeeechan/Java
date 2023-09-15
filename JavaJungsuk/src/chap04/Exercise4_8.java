@@ -1,6 +1,6 @@
 package chap04;
 
-// Math.random()À» ÀÌ¿ëÇØ¼­ 1ºÎÅÍ 6 »çÀÌÀÇ ÀÓÀÇÀÇ Á¤¼ö¸¦ º¯¼ö value¿¡ ÀúÀåÇÏ´Â ÄÚµå ÀÛ¼º
+// Math.random()ì„ ì´ìš©í•´ì„œ 1ë¶€í„° 6 ì‚¬ì´ì˜ ì„ì˜ì˜ ì •ìˆ˜ë¥¼ ë³€ìˆ˜ valueì— ì €ì¥í•˜ëŠ” ì½”ë“œ ì‘ì„±
 
 public class Exercise4_8 {
 	public static void main(String[] args) {

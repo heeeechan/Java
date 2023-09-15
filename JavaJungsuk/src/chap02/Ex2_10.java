@@ -4,14 +4,14 @@ import java.util.Scanner;
 
 public class Ex2_10 {
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in); // Scanner Å¬·¡½ºÀÇ °´Ã¼ »ı¼º
+		Scanner scanner = new Scanner(System.in); // Scanner í´ë˜ìŠ¤ì˜ ê°ì²´ ìƒì„±
 
-		System.out.print("µÎÀÚ¸® Á¤¼ö¸¦ ÇÏ³ª ÀÔ·ÂÇØÁÖ¼¼¿ä.>");
-		String input = scanner.nextLine(); // ÀÔ·Â¹ŞÀº ³»¿ëÀ» input¿¡ ÀúÀå
-		int num = Integer.parseInt(input); // ÀÔ·Â¹ŞÀº ³»¿ëÀ» intÅ¸ÀÔÀÇ °ªÀ¸·Î º¯È¯
-		// int num = scanner.nextInt(); => Á¤¼ö ÀÔ·Â ¹Ş¾Æ¼­ º¯¼ö num¿¡ ÀúÀå
+		System.out.print("ë‘ìë¦¬ ì •ìˆ˜ë¥¼ í•˜ë‚˜ ì…ë ¥í•´ì£¼ì„¸ìš”.>");
+		String input = scanner.nextLine(); // ì…ë ¥ë°›ì€ ë‚´ìš©ì„ inputì— ì €ì¥
+		int num = Integer.parseInt(input); // ì…ë ¥ë°›ì€ ë‚´ìš©ì„ intíƒ€ì…ì˜ ê°’ìœ¼ë¡œ ë³€í™˜
+		// int num = scanner.nextInt(); => ì •ìˆ˜ ì…ë ¥ ë°›ì•„ì„œ ë³€ìˆ˜ numì— ì €ì¥
 
-		System.out.println("ÀÔ·Â³»¿ë :" + input);
+		System.out.println("ì…ë ¥ë‚´ìš© :" + input);
 		System.out.printf("num=%d%n", num);
 	}
 }

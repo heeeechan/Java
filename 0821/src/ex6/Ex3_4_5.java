@@ -3,17 +3,17 @@ package ex6;
 public class Ex3_4_5 {
 	public static void main(String[] args) {
 		Student s = new Student();
-		s.name = "È«±æµ¿";
+		s.name = "í™©í¬ì°¬";
 		s.ban = 1;
 		s.no = 1;
 		s.kor = 100;
 		s.eng = 60;
 		s.math = 76;
-		
-		System.out.println("ÀÌ¸§:" + s.name);
-		System.out.println("ÃÑÁ¡:" + s.getTotal());
-		System.out.println("Æò±Õ:" + s.getAverage());
+
+		System.out.println("ì´ë¦„:" + s.name);
+		System.out.println("ì´ì ìˆ˜:" + s.getTotal());
+		System.out.println("í‰ê· ì ìˆ˜:" + s.getAverage());
 		System.out.println(s.info());
-	
+
 	}
 }

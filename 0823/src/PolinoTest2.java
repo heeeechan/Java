@@ -1,10 +1,16 @@
 class AA {
 	int a;
-	void methodA() {} //1
-	void method() {} //2
+
+	void methodA() {
+	} // 1
+
+	void method() {
+	} // 2
+
 	void info() {
 		System.out.println(getPay());
 	}
+
 	int getPay() {
 		return 0;
 	}
@@ -12,8 +18,13 @@ class AA {
 
 class BB extends AA {
 	int b;
-	void methodB() {} //2
-	void method() {} //4
+
+	void methodB() {
+	} // 2
+
+	void method() {
+	} // 4
+
 	@Override
 	int getPay() {
 		return 100;
@@ -23,12 +34,12 @@ class BB extends AA {
 public class PolinoTest2 {
 	public static void main(String[] args) {
 		AA obj = new BB();
-		obj.methodA(); //1
+		obj.methodA(); // 1
 		// obj.methodB();
-		obj.method(); //4
+		obj.method(); // 4
 		obj.a = 10;
 		obj.info();
 	}
-	// ÀÚ½Ä °´Ã¼¸¦ ºÎ¸ğ º¯¼ö¿¡ ³ÖÀ» °æ¿ì, ºÎ¸ğ¿¡´Â ¾ø´Â ÀÚ½ÄÀÇ º¯¼ö³ª ÇÔ¼ö´Â »ç¿ëÇÒ ¼ö ¾ø´Ù.
-	// ´Ü, ¿À¹ö¶óÀÌµùÇÑ ÇÔ¼ö´Â ºÎ¸ğ º¯¼ö·Î ÀÚ½ÄÀÇ ÇÔ¼ö¸¦ È£ÃâÇÑ´Ù.
+	// ìì‹ ê°ì²´ë¥¼ ë¶€ëª¨ ë³€ìˆ˜ì— ë„£ì„ ê²½ìš°, ë¶€ëª¨ì—ëŠ” ì—†ëŠ” ìì‹ì˜ ë³€ìˆ˜ë‚˜ í•¨ìˆ˜ëŠ” ì‚¬ìš©í•  ìˆ˜ ì—†ë‹¤.
+	// ë‹¨, ì˜¤ë²„ë¼ì´ë”©í•œ í•¨ìˆ˜ëŠ” ë¶€ëª¨ ë³€ìˆ˜ë¡œ ìì‹ì˜ í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•œë‹¤.
 }

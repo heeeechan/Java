@@ -14,15 +14,15 @@ abstract class Player {
 	}
 }
 
-// abstract class¸¦ »ó¼Ó¹ŞÀ¸¸é abstract method¸¦ ¹İµå½Ã ±¸ÇöÇÏÁö ¾ÊÀ¸¸é
-// »ó¼Ó¹ŞÀº ÀÚ½Ä Å¬·¡½ºµµ abstract Å¬·¡½º¿©¾ß ÇÑ´Ù.
+// abstract classë¥¼ ìƒì†ë°›ìœ¼ë©´ abstract methodë¥¼ ë°˜ë“œì‹œ êµ¬í˜„í•˜ì§€ ì•Šìœ¼ë©´
+// ìƒì†ë°›ì€ ìì‹ í´ë˜ìŠ¤ë„ abstract í´ë˜ìŠ¤ì—¬ì•¼ í•œë‹¤.
 
 class DPlayer extends Player {
 	@Override
 	void play(int pos) {
 		System.out.println("DPlayer play(int POS)");
 	}
-	
+
 	@Override
 	void stop() {
 		System.out.println("DPlayer stop()");
@@ -31,11 +31,11 @@ class DPlayer extends Player {
 
 public class AbstractTest1 {
 	public static void main(String[] args) {
-		// Player player = new Player(); // abstract class´Â °´Ã¼ »ı¼º ºÒ°¡´É
+		// Player player = new Player(); // abstract classëŠ” ê°ì²´ ìƒì„± ë¶ˆê°€ëŠ¥
 		DPlayer dPlayer = new DPlayer();
 		dPlayer.play(10);
 		dPlayer.stop();
-		
+
 		Player player = new DPlayer(); // upcasting
 		dPlayer.play(10);
 		dPlayer.stop();

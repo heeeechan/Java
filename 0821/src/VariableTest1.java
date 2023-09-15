@@ -1,18 +1,18 @@
 class MyClass {
 	int num;
 	static int snum;
-	
+
 	void setNum(int n) {
-		
+
 	}
 }
 
 public class VariableTest1 {
 	public static void main(String[] args) {
 		int n;
-		MyClass mc = new MyClass(); //num º¯¼ö »ı¼º
-		
-		//System.out.println(n); //ÃÊ±âÈ­ÇÏÁö ¾Ê°í »ç¿ë½Ã ¿¡·¯
-		System.out.println(mc.num); //ÃÊ±âÈ­ÇÏÁö ¾Ê°í »ç¿ë °¡´É
+		MyClass mc = new MyClass(); // num ë³€ìˆ˜ ìƒì„±
+
+		// System.out.println(n); //ì´ˆê¸°í™”í•˜ì§€ ì•Šê³  ì‚¬ìš©ì‹œ ì—ëŸ¬
+		System.out.println(mc.num); // ì´ˆê¸°í™”í•˜ì§€ ì•Šê³  ì‚¬ìš© ê°€ëŠ¥
 	}
 }

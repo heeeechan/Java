@@ -1,12 +1,14 @@
 class TClass1 {
 	void method1() {
 		int num1;
-		method2(); //°°Àº Å¬·¡½º ³»ÀÇ ¸Ş¼Òµåµé ³¢¸®´Â ¼­·Î È£ÃâÀÌ °¡´ÉÇÔ(·¹ÆÛ·±½º º¯¼ö ¾øÀÌ)
+		method2(); // ê°™ì€ í´ë˜ìŠ¤ ë‚´ì˜ ë©”ì†Œë“œë“¤ ë¼ë¦¬ëŠ” ì„œë¡œ í˜¸ì¶œì´ ê°€ëŠ¥í•¨(ë ˆí¼ëŸ°ìŠ¤ ë³€ìˆ˜ ì—†ì´)
 	}
+
 	void method2() {
 		int num2;
 		method3();
 	}
+
 	void method3() {
 		int num3;
 	}
@@ -15,12 +17,13 @@ class TClass1 {
 class TClass2 {
 	void title() {
 		System.out.println("-----");
-		System.out.println("Á¦¸ñ");
+		System.out.println("ì œëª©");
 		boolean flag = false;
-		if(flag == true)
+		if (flag == true)
 			return;
 		System.out.println("-----");
 	}
+
 	int retFunc() {
 		return 10;
 	}
@@ -30,7 +33,6 @@ public class ClassTest4 {
 	public static void main(String[] args) {
 		TClass1 tc = new TClass1();
 		tc.method1();
-		
-		
+
 	}
 }

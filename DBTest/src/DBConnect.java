@@ -8,7 +8,7 @@ public class DBConnect {
 	public static Connection getConnection() {
 		Connection conn = null;
 		try {
-			Class.forName("org.mariadb.jdbc.Driver"); // driver º≥¡§
+			Class.forName("org.mariadb.jdbc.Driver"); // driver ÏÑ§Ï†ï
 			conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/testdb", "root", "1234");
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -32,7 +32,7 @@ public class DBConnect {
 		try {
 			stmt = conn.createStatement();
 			int cnt = stmt.executeUpdate(sql);
-			System.out.println(cnt + "∞≥ µ•¿Ã≈Õ ª¿‘");
+			System.out.println(cnt + "Í∞ú Îç∞Ïù¥ÌÑ∞ ÏÇΩÏûÖ");
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -53,7 +53,7 @@ public class DBConnect {
 		try {
 			stmt = conn.createStatement();
 			int cnt = stmt.executeUpdate(sql);
-			System.out.println(cnt + "∞≥ µ•¿Ã≈Õ ºˆ¡§");
+			System.out.println(cnt + "Í∞ú Îç∞Ïù¥ÌÑ∞ ÏàòÏ†ï");
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -74,7 +74,7 @@ public class DBConnect {
 		try {
 			stmt = conn.createStatement();
 			int cnt = stmt.executeUpdate(sql);
-			System.out.println(cnt + "∞≥ µ•¿Ã≈Õ ªË¡¶");
+			System.out.println(cnt + "Í∞ú Îç∞Ïù¥ÌÑ∞ ÏÇ≠Ï†ú");
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -151,8 +151,8 @@ public class DBConnect {
 	}
 
 	public static void main(String[] args) {
-		// insertUser("ha", "«œ±Êµø");
-		// updateUserName("ha", "«œ«œ");
+		// insertUser("ha", "ÌïòÍ∏∏Îèô");
+		// updateUserName("ha", "ÌïòÌïò");
 		// deleteUser("ha");
 		// userInfo("cha");
 		allUserInfo();

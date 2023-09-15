@@ -1,10 +1,10 @@
 public class Student {
-		String name;
-		String address;
-		int grade; 
-		int num;
-		
-		String info() {
-			return String.format("ÀÌ¸§:%s, ÁÖ¼Ò:%s, ÇĞ³â:%d, ÇĞ¹ø:%d", name, address, grade, num);
-		}
+	String name;
+	String address;
+	int grade;
+	int num;
+
+	String info() {
+		return String.format("ì´ë¦„:%s, ì£¼ì†Œ:%s, í•™ë…„:%d, í•™ë²ˆ:%d", name, address, grade, num);
+	}
 }

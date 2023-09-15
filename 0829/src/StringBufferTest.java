@@ -12,6 +12,5 @@ public class StringBufferTest {
 		System.out.println(sb);
 		sb.replace(0, 2, "ta");
 		System.out.println(sb);
-		
 	}
 }

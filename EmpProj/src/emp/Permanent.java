@@ -25,6 +25,6 @@ public class Permanent extends Employee {
 
 	@Override
 	public String info() {
-		return super.info() + ",�޿�:" + getPay();
+		return super.info() + ",보너스:" + getPay();
 	}
 }

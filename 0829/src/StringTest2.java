@@ -28,15 +28,6 @@ public class StringTest2 {
 		String pineapple = fruitStr.substring(13, 22);
 		System.out.println(pineapple);
 
-//		System.out.println("Y/N을 선택하세요:");
-//		Scanner sc = new Scanner(System.in);
-//		String answer = sc.nextLine();
-//		if(answer.toLowerCase() == "y") {
-//			System.out.println("Yes 선택");
-//		} else if (answer.toUpperCase().equals("y")) {
-//			System.out.println("No 선택");
-//		}
-
 		String str5 = "Hello     ".trim();
 		System.out.println(str5);
 		String str6 = String.valueOf(100);

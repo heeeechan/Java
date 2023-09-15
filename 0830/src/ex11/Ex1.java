@@ -6,9 +6,9 @@ class Ex1 {
 	public static void main(String[] args) {
 		ArrayList list1 = new ArrayList();
 		ArrayList list2 = new ArrayList();
-		ArrayList kyo = new ArrayList(); // ±³ÁıÇÕ
-		ArrayList cha = new ArrayList(); // Â÷ÁıÇÕ
-		ArrayList hap = new ArrayList(); // ÇÕÁıÇÕ
+		ArrayList kyo = new ArrayList(); // êµì§‘í•©
+		ArrayList cha = new ArrayList(); // ì°¨ì§‘í•©
+		ArrayList hap = new ArrayList(); // í•©ì§‘í•©
 
 		list1.add(1);
 		list1.add(2);
@@ -21,14 +21,14 @@ class Ex1 {
 		list2.add(6);
 
 		kyo.addAll(list1);
-		kyo.retainAll(list2); // kyo¿¡ list2ÀÇ °øÅëµÈ ¿ä¼Ò¸¸ ³²±è
+		kyo.retainAll(list2); // kyoì— list2ì˜ ê³µí†µëœ ìš”ì†Œë§Œ ë‚¨ê¹€
 
 		cha.addAll(list1);
-		cha.removeAll(list2); // cha¿¡¼­ list2ÀÇ ¿ä¼Ò¸¦ ¸ğµÎ Á¦°Å
+		cha.removeAll(list2); // chaì—ì„œ list2ì˜ ìš”ì†Œë¥¼ ëª¨ë‘ ì œê±°
 
 		hap.addAll(list1);
-		hap.removeAll(list2); // hap¿¡¼­ list2ÀÇ ¿ä¼Ò¸¦ ¸ğµÎ Á¦°Å
-		hap.addAll(list2); // ³ª¸ÓÁö list2ÀÇ ¿ä¼Ò¸¦ hap¿¡ Ãß°¡
+		hap.removeAll(list2); // hapì—ì„œ list2ì˜ ìš”ì†Œë¥¼ ëª¨ë‘ ì œê±°
+		hap.addAll(list2); // ë‚˜ë¨¸ì§€ list2ì˜ ìš”ì†Œë¥¼ hapì— ì¶”ê°€
 
 		System.out.println("list1=" + list1);
 		System.out.println("list2=" + list2);

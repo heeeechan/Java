@@ -4,28 +4,28 @@ import java.util.*;
 
 class Ex8 {
 	public static void main(String[] args) {
-		// 1~100»çÀÌÀÇ ÀÓÀÇÀÇ °ªÀ» ¾ò¾î¼­ answer¿¡ ÀúÀåÇÑ´Ù.
+		// 1~100ì‚¬ì´ì˜ ì„ì˜ì˜ ê°’ì„ ì–»ì–´ì„œ answerì— ì €ì¥í•œë‹¤.
 		int answer = (int) (Math.random() * 100) + 1;
-		int input = 0; // »ç¿ëÀÚÀÔ·ÂÀ» ÀúÀåÇÒ °ø°£
-		int count = 0; // ½ÃµµÈ½¼ö¸¦ ¼¼±â À§ÇÑ º¯¼ö
+		int input = 0; // ì‚¬ìš©ìì…ë ¥ì„ ì €ì¥í•  ê³µê°„
+		int count = 0; // ì‹œë„íšŸìˆ˜ë¥¼ ì„¸ê¸° ìœ„í•œ ë³€ìˆ˜
 		do {
 			count++;
-			System.out.print("1°ú 100»çÀÌÀÇ °ªÀ» ÀÔ·ÂÇÏ¼¼¿ä :");
-
+			System.out.print("1ê³¼ 100ì‚¬ì´ì˜ ê°’ì„ ì…ë ¥í•˜ì„¸ìš” :");
+			// System.out.println(answer);
 			try {
 				input = new Scanner(System.in).nextInt();
 				if (answer > input) {
-					System.out.println("´õ Å« ¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+					System.out.println("ë” í° ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 				} else if (answer < input) {
-					System.out.println("´õ ÀÛÀº ¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+					System.out.println("ë” ì‘ì€ ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 				} else {
-					System.out.println("¸ÂÃè½À´Ï´Ù.");
-					System.out.println("½ÃµµÈ½¼ö´Â " + count + "¹øÀÔ´Ï´Ù.");
-					break; // do-while¹®À» ¹ş¾î³­´Ù
+					System.out.println("ë§ì·„ìŠµë‹ˆë‹¤.");
+					System.out.println("ì‹œë„íšŸìˆ˜ëŠ” " + count + "ë²ˆì…ë‹ˆë‹¤.");
+					break; // do-whileë¬¸ì„ ë²—ì–´ë‚œë‹¤
 				}
 			} catch (InputMismatchException e) {
-				System.out.println("À¯È¿ÇÏÁö ¾ÊÀº °ªÀÔ´Ï´Ù. ´Ù½Ã °ªÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+				System.out.println("ìœ íš¨í•˜ì§€ ì•Šì€ ê°’ì…ë‹ˆë‹¤. ë‹¤ì‹œ ê°’ì„ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 			}
-		} while (true); // ¹«ÇÑ¹İº¹¹®
+		} while (true); // ë¬´í•œë°˜ë³µë¬¸
 	} // end of main
 } // end of class HighLow

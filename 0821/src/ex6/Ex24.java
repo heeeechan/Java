@@ -7,8 +7,8 @@ public class Ex24 {
 
 	public static void main(String[] args) {
 		int value = 5;
-		System.out.println(value + "ÀÇ Àı´ë°ª:" + abs(value));
+		System.out.println(value + "ì˜ ì ˆëŒ€ê°’:" + abs(value));
 		value = -10;
-		System.out.println(value + "ÀÇ Àı´ë°ª:" + abs(value));
+		System.out.println(value + "ì˜ ì ˆëŒ€ê°’:" + abs(value));
 	}
 }

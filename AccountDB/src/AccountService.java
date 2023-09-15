@@ -4,67 +4,71 @@ import java.util.List;
 public class AccountService {
 	public void accountInfo(String id) {
 		Connection conn = Dao.getConnection();
-		Account acc = Dao.selectAccount(conn, id);
+
+		// ê³„ì¢Œê°œì„¤ ì—¬ë¶€ ì¡°íšŒ í›„ ê³„ì¢Œ ë¦¬í„´
+		Account acc = Dao.selectAccount(conn, "10001");
 		if (acc == null) {
-			System.out.println("¾ø´Â °èÁÂÀÔ´Ï´Ù.");
+			System.out.println("ê³„ì¢Œê°€ ì—†ìŠµë‹ˆë‹¤. ë‹¤ì‹œ í™•ì¸í•´ì£¼ì„¸ìš”.");
 		} else {
 			System.out.println(acc);
-		}
-		Dao.close(conn);
-	}
-
-	public void makeAccount(Account acc) {
-		Connection conn = Dao.getConnection();
-		Account racc = Dao.selectAccount(conn, acc.getId());
-		if (racc != null) {
-			System.out.println("Áßº¹ °èÁÂ¹øÈ£ÀÔ´Ï´Ù.");
-		} else {
-			int cnt = Dao.insertAccount(conn, acc);
-			if (cnt > 0) {
-				System.out.println(cnt + "°³ °èÁÂ°¡ °³¼³µÇ¾ú½À´Ï´Ù.");
-			}
-		}
-		Dao.close(conn);
-	}
-
-	public void deposit(String id, int money) {
-		Connection conn = Dao.getConnection();
-		Account acc = Dao.selectAccount(conn, id);
-		if (acc == null) {
-			System.out.println("°èÁÂ¹øÈ£°¡ Æ²¸³´Ï´Ù.");
-			return;
-		}
-		acc.deposit(money);
-		if (Dao.updateAccount(conn, acc) > 0) {
-			System.out.printf("%s°èÁÂ ÀÜ¾×Àº %d¿ø ÀÔ´Ï´Ù.", acc.getId(), acc.getBalance());
-		}
-		Dao.close(conn);
-	}
-
-	public void withdraw(String id, int money) {
-		Connection conn = Dao.getConnection();
-		Account acc = Dao.selectAccount(conn, id);
-		if (acc == null) {
-			System.out.println("°èÁÂ¹øÈ£°¡ Æ²¸³´Ï´Ù.");
-			return;
-		}
-		if (acc.getBalance() < money) {
-			System.out.println("ÀÜ¾×ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
-			return;
-		}
-		acc.withdraw(money);
-		if (Dao.updateAccount(conn, acc) > 0) {
-			System.out.printf("%s°èÁÂ ÀÜ¾×Àº %d¿ø ÀÔ´Ï´Ù.", acc.getId(), acc.getBalance());
 		}
 		Dao.close(conn);
 	}
 
 	public void allAccountInfo() {
 		Connection conn = Dao.getConnection();
-		List<Account> accs = Dao.selectAccountList(conn);
-		for (Account acc : accs) {
-			System.out.println(acc);
+		List<Account> accounts = Dao.selectAccountList(conn);
+		for (Account account : accounts) {
+			System.out.println(account);
 		}
 		Dao.close(conn);
 	}
+
+	public void makeAccount(Account acc) {
+		Connection conn = Dao.getConnection();
+		Account checkAccount = Dao.selectAccount(conn, acc.getId()); // ì¤‘ë³µê³„ì¢Œì²´í¬
+		if (checkAccount != null) {
+			System.out.println("ì¤‘ë³µ ê³„ì¢Œë²ˆí˜¸ì…ë‹ˆë‹¤.");
+		} else {
+			int insertedCount = Dao.insertAccount(conn, acc);
+			if (insertedCount > 0) {
+				System.out.println(insertedCount + "ê°œì˜ ê³„ì¢Œê°€ ì„±ê³µì ìœ¼ë¡œ ê°œì„¤ë˜ì—ˆìŠµë‹ˆë‹¤.");
+			}
+		}
+		Dao.close(conn);
+	}
+
+	public void deposit(String id, Integer money) {
+		Connection conn = Dao.getConnection();
+		Account acc = Dao.selectAccount(conn, id);
+		if (acc == null) {
+			System.out.println("ê³„ì¢Œë²ˆí˜¸ê°€ í‹€ë¦½ë‹ˆë‹¤.");
+			return;
+		}
+		acc.deposit(money);
+		if (Dao.updateAccount(conn, acc) > 0) {
+			System.out.println("ì…ê¸ˆí–ˆìŠµë‹ˆë‹¤.");
+			System.out.println(String.format("%sê³„ì¢Œì˜ ì”ì•¡ì€ %dì› ì…ë‹ˆë‹¤.", acc.getId(), acc.getBalance()));
+		}
+		Dao.close(conn);
+	}
+
+	public void withdraw(String id, Integer money) {
+		Connection conn = Dao.getConnection();
+		Account acc = Dao.selectAccount(conn, id);
+		if (acc == null) {
+			System.out.println("ê³„ì¢Œë²ˆí˜¸ê°€ í‹€ë ¸ìŠµë‹ˆë‹¤.");
+			return;
+		}
+		if (acc.getBalance() < money) {
+			System.out.println("ì”ì•¡ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
+		}
+		acc.withdraw(money);
+		if (Dao.updateAccount(conn, acc) > 0) {
+			System.out.println("ì¶œê¸ˆì— ì„±ê³µí–ˆìŠµë‹ˆë‹¤.");
+			System.out.println(String.format("%sê³„ì¢Œì˜ ì”ì•¡ì€ %dì› ì…ë‹ˆë‹¤.", acc.getId(), acc.getBalance()));
+		}
+		Dao.close(conn);
+	}
+
 }

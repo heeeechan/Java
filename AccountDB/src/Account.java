@@ -5,6 +5,7 @@ public class Account {
 	private String grade;
 
 	public Account() {
+
 	}
 
 	public Account(String id, String name, Integer balance, String grade) {
@@ -12,6 +13,7 @@ public class Account {
 		this.name = name;
 		this.balance = balance;
 		this.grade = grade;
+
 	}
 
 	public String getId() {
@@ -47,20 +49,18 @@ public class Account {
 	}
 
 	public void deposit(Integer money) {
-		if (money > 0) {
-			balance += money;
-		}
+		if (money > 0)
+			balance = balance + money;
 	}
 
 	public void withdraw(Integer money) {
 		if (balance >= money) {
-			balance -= money;
+			balance = balance - money;
 		}
 	}
 
 	@Override
 	public String toString() {
-		return String.format("°èÁÂ¹øÈ£:%s, ÀÌ¸§:%s, ÀÜ¾×:%d, µî±Ş:%s", id, name, balance, grade);
+		return String.format("ê³„ì¢Œë²ˆí˜¸:%s, ì´ë¦„ :%s, ì”ì•¡: %d, ë“±ê¸‰:%s", id, name, balance, grade);
 	}
-
 }

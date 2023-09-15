@@ -10,25 +10,26 @@ public class BankException extends Exception {
 
 	@Override
 	public String toString() {
-		String msg = "";
+		String msg = "[" + super.getMessage() + "]";
 		switch (errCode) {
 		case NOID:
-			msg += "°èÁÂ¹øÈ£°¡ Æ²¸³´Ï´Ù.";
+			msg += "ê³„ì¢Œë²ˆí˜¸ ì˜¤ë¥˜ì…ë‹ˆë‹¤.";
 			break;
 		case EXISTID:
-			msg += "°èÁÂ¹øÈ£°¡ Áßº¹µË´Ï´Ù.";
+			msg += "ê³„ì¢Œë²ˆí˜¸ê°€ ì¤‘ë³µë©ë‹ˆë‹¤.";
 			break;
 		case LACK:
-			msg += "ÀÜ¾×ÀÌ ºÎÁ·ÇÕ´Ï´Ù.";
+			msg += "ì”ì•¡ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.";
 			break;
 		case MINUS:
-			msg += "ÀÔ±İ¾× ¿À·ùÀÔ´Ï´Ù.";
+			msg += "ì…ê¸ˆì•¡ ì˜¤ë¥˜ì…ë‹ˆë‹¤.";
 			break;
 		case MENU:
-			msg += "¸Ş´º ¼±ÅÃ ¿À·ùÀÔ´Ï´Ù.";
+			msg += "ì˜ëª» ì„ íƒí–ˆìŠµë‹ˆë‹¤.";
 			break;
 		default:
-			msg += "ÀÏ¹İ ¿À·ùÀÔ´Ï´Ù.";
+			msg += "ì¼ë°˜ ì˜¤ë¥˜ì…ë‹ˆë‹¤.";
+			break;
 		}
 		return msg;
 	}

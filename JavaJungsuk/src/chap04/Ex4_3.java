@@ -4,14 +4,14 @@ import java.util.Scanner;
 
 public class Ex4_3 {
 	public static void main(String[] args) {
-		System.out.print("¼ıÀÚ¸¦ ÇÏ³ª ÀÔ·ÂÇÏ¼¼¿ä.>");
+		System.out.print("ìˆ«ìë¥¼ í•˜ë‚˜ ì…ë ¥í•˜ì„¸ìš”.>");
 		Scanner scanner = new Scanner(System.in);
-		int input = scanner.nextInt(); // È­¸éÀ» ÅëÇØ ÀÔ·Â¹ŞÀº ¼ıÀÚ¸¦ input¿¡ ÀúÀå
+		int input = scanner.nextInt(); // í™”ë©´ì„ í†µí•´ ì…ë ¥ë°›ì€ ìˆ«ìë¥¼ inputì— ì €ì¥
 
 		if (input == 0) {
-			System.out.println("ÀÔ·ÂÇÏ½Å ¼ıÀÚ´Â 0ÀÔ´Ï´Ù.");
-		} else { // input != 0ÀÎ °æ¿ì
-			System.out.println("ÀÔ·ÂÇÏ½Å ¼ıÀÚ´Â 0ÀÌ ¾Æ´Õ´Ï´Ù.");
+			System.out.println("ì…ë ¥í•˜ì‹  ìˆ«ìëŠ” 0ì…ë‹ˆë‹¤.");
+		} else { // input != 0ì¸ ê²½ìš°
+			System.out.println("ì…ë ¥í•˜ì‹  ìˆ«ìëŠ” 0ì´ ì•„ë‹™ë‹ˆë‹¤.");
 		}
 	}
 }

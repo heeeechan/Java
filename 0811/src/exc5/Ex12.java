@@ -2,29 +2,29 @@ package exc5;
 
 public class Ex12 {
 	public static void main(String[] args) {
-		// 3m Â¥¸® ¿ì¹° ¹Ù´Ú¿¡ ´ÞÆØÀÌ°¡ ÀÖ´Ù.
-		// ´ÞÆØÀÌ´Â ³·µ¿¾È 55cm ¿Ã¶ó¿Ã ¼ö ÀÖ´Ù.
-		// ÇÏÁö¸¸ ³¯ÀÌ Áö¸é ÀáÀ» ÀÚ¾ß ÇÑ´Ù.ÀÚ´Â µ¿¾È 3cm¸¦ ¹Ì²ô·¯Á® ³»·Á¿Â´Ù.
-		// ´ÞÆØÀÌ°¡ ¿ì¹° ¹ÛÀ¸·Î ³ª¿À´Â µ¥ ¸îÀÏÀÌ °É¸±±î?
-		// ¹Ýº¹¹®°ú Á¶°Ç¹®À» ÀÌ¿ëÇÏ¿© ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
-		
-		int SnailMoving = 0; // ´ÞÆØÀÌ°¡ ¿À¸£´Â ³ôÀÌ
-        int WellHeight = 300; // ¿ì¹°ÀÇ ³ôÀÌ
-        int DayCount = 0; // ÀÏ ¼ö
+		// 3m ì§œë¦¬ ìš°ë¬¼ ë°”ë‹¥ì— ë‹¬íŒ½ì´ê°€ ìžˆë‹¤.
+		// ë‹¬íŒ½ì´ëŠ” ë‚®ë™ì•ˆ 55cm ì˜¬ë¼ì˜¬ ìˆ˜ ìžˆë‹¤.
+		// í•˜ì§€ë§Œ ë‚ ì´ ì§€ë©´ ìž ì„ ìžì•¼ í•œë‹¤.ìžëŠ” ë™ì•ˆ 3cmë¥¼ ë¯¸ë„ëŸ¬ì ¸ ë‚´ë ¤ì˜¨ë‹¤.
+		// ë‹¬íŒ½ì´ê°€ ìš°ë¬¼ ë°–ìœ¼ë¡œ ë‚˜ì˜¤ëŠ” ë° ëª‡ì¼ì´ ê±¸ë¦´ê¹Œ?
+		// ë°˜ë³µë¬¸ê³¼ ì¡°ê±´ë¬¸ì„ ì´ìš©í•˜ì—¬ í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤.
 
-	    // ´ÞÆØÀÌ°¡ ¿ì¹° ¹ÛÀ¸·Î ³ª¿Ã ¶§±îÁö ¹Ýº¹
-	    while (SnailMoving < WellHeight) {
-	    	SnailMoving += 55; // ³·µ¿¾È 55cm ¿Ã¶ó°¨
-	        DayCount++; // ÀÏ ¼ö Áõ°¡
+		int SnailMoving = 0; // ë‹¬íŒ½ì´ê°€ ì˜¤ë¥´ëŠ” ë†’ì´
+		int WellHeight = 300; // ìš°ë¬¼ì˜ ë†’ì´
+		int DayCount = 0; // ì¼ ìˆ˜
 
-	        if (SnailMoving >= WellHeight) {
-	        	break; // ´ÞÆØÀÌ°¡ ¿ì¹° ¹ÛÀ¸·Î ³ª¿À¸é ¹Ýº¹ Á¾·á
-	        }
+		// ë‹¬íŒ½ì´ê°€ ìš°ë¬¼ ë°–ìœ¼ë¡œ ë‚˜ì˜¬ ë•Œê¹Œì§€ ë°˜ë³µ
+		while (SnailMoving < WellHeight) {
+			SnailMoving += 55; // ë‚®ë™ì•ˆ 55cm ì˜¬ë¼ê°
+			DayCount++; // ì¼ ìˆ˜ ì¦ê°€
 
-	        SnailMoving -= 3; // ¹ã¿¡ 3cm ¹Ì²ô·¯Á® ³»·Á°¨
-	    }
+			if (SnailMoving >= WellHeight) {
+				break; // ë‹¬íŒ½ì´ê°€ ìš°ë¬¼ ë°–ìœ¼ë¡œ ë‚˜ì˜¤ë©´ ë°˜ë³µ ì¢…ë£Œ
+			}
 
-	    System.out.println(DayCount + "ÀÏ");
+			SnailMoving -= 3; // ë°¤ì— 3cm ë¯¸ë„ëŸ¬ì ¸ ë‚´ë ¤ê°
+		}
+
+		System.out.println(DayCount + "ì¼");
 	}
 }
 

@@ -1,35 +1,38 @@
 package ex7;
 
 abstract class Unit {
-	int x, y; // ÇöÀç À§Ä¡
+	int x, y; // í˜„ì¬ ìœ„ì¹˜
 
-	abstract void move(int x, int y); // ÁöÁ¤µÈ À§Ä¡·Î ÀÌµ¿
+	abstract void move(int x, int y); // ì§€ì •ëœ ìœ„ì¹˜ë¡œ ì´ë™
 
-	void stop() { // ÇöÀç À§Ä¡¿¡ Á¤Áö
+	void stop() { // í˜„ì¬ ìœ„ì¹˜ì— ì •ì§€
 
 	}
 }
 
-class Marine extends Unit { // º¸º´
-	void move(int x, int y) {}
+class Marine extends Unit { // ë³´ë³‘
+	void move(int x, int y) {
+	}
 
 	void stimPack() {
-	/* ½ºÆÀÆÑÀ» »ç¿ëÇÑ´Ù. */}
+		/* ìŠ¤íŒ€íŒ©ì„ ì‚¬ìš©í•œë‹¤. */}
 }
 
-class Tank extends Unit { // ÅÊÅ©
-	void move(int x, int y) {}
+class Tank extends Unit { // íƒ±í¬
+	void move(int x, int y) {
+	}
 
 	void changeMode() {
-	/* °ø°İ¸ğµå¸¦ º¯È¯ÇÑ´Ù. */}
+		/* ê³µê²©ëª¨ë“œë¥¼ ë³€í™˜í•œë‹¤. */}
 }
 
-class Dropship extends Unit { // ¼ö¼Û¼±
-	void move(int x, int y) {}
-	
+class Dropship extends Unit { // ìˆ˜ì†¡ì„ 
+	void move(int x, int y) {
+	}
+
 	void load() {
-	/* ¼±ÅÃµÈ ´ë»óÀ» ÅÂ¿î´Ù. */ }
+		/* ì„ íƒëœ ëŒ€ìƒì„ íƒœìš´ë‹¤. */ }
 
 	void unload() {
-	/* ¼±ÅÃµÈ ´ë»óÀ» ³»¸°´Ù. */ }
+		/* ì„ íƒëœ ëŒ€ìƒì„ ë‚´ë¦°ë‹¤. */ }
 }

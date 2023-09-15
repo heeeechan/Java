@@ -11,10 +11,11 @@ public class ExceptionTest2 {
 				count--;
 			} catch (ArrayIndexOutOfBoundsException e) {
 				count--;
-			} catch (Exception e) {} // ÃÖ»óÀ§ ¿¹¿Ü ExceptionÀº ¸Ç ¸¶Áö¸·¿¡ ¿Í¾ß ÇÑ´Ù.
+			} catch (Exception e) {
+			} // ìµœìƒìœ„ ì˜ˆì™¸ Exceptionì€ ë§¨ ë§ˆì§€ë§‰ì— ì™€ì•¼ í•œë‹¤.
 		}
 		System.out.println(tot);
 		System.out.println(tot / (double) count);
-		System.out.println("ÇÁ·Î±×·¥ Á¾·á");
+		System.out.println("í”„ë¡œê·¸ë¨ ì¢…ë£Œ");
 	}
 }

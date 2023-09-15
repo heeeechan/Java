@@ -3,8 +3,8 @@ package chap03;
 public class Exercise3_5 {
 	public static void main(String[] args) {
 		int num = 10;
-		System.out.println(num > 0 ? "¾ç¼ö" : (num < 0 ? "À½¼ö" : 0));
+		System.out.println(num > 0 ? "ì–‘ìˆ˜" : (num < 0 ? "ìŒìˆ˜" : 0));
 	}
 }
-// numÀÇ °ª¿¡ µû¶ó '¾ç¼ö', 'À½¼ö', '0'À» Ãâ·ÂÇÏ´Â ÄÚµå ÀÛ¼º. »ïÇ×¿¬»êÀÚ ÀÌ¿ë
-// °á°ú) ¾ç¼ö
+// numì˜ ê°’ì— ë”°ë¼ 'ì–‘ìˆ˜', 'ìŒìˆ˜', '0'ì„ ì¶œë ¥í•˜ëŠ” ì½”ë“œ ìž‘ì„±. ì‚¼í•­ì—°ì‚°ìž ì´ìš©
+// ê²°ê³¼) ì–‘ìˆ˜

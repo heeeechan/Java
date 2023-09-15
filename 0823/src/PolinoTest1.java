@@ -1,5 +1,6 @@
 class Shape {
 	String color;
+
 	void draw() {
 		System.out.println("shape");
 	}
@@ -9,6 +10,7 @@ class Circle extends Shape {
 	int x;
 	int y;
 	int r;
+
 	@Override
 	void draw() {
 		System.out.println("circle");
@@ -22,10 +24,10 @@ public class PolinoTest1 {
 		c.r = 20;
 		c.x = c.y = 10;
 		c.draw();
-		
-		Shape s = new Circle(); // upcasting ÀÚ½Ä °´Ã¼¸¦ ºÎ¸ğ ÂüÁ¶ º¯¼ö¿¡ ³ÖÀ½
+
+		Shape s = new Circle(); // upcasting ìì‹ ê°ì²´ë¥¼ ë¶€ëª¨ ì°¸ì¡° ë³€ìˆ˜ì— ë„£ìŒ
 		c.color = "red";
 		// c.x = 10;
-		s.draw(); // ´ÙÇü¼º
+		s.draw(); // ë‹¤í˜•ì„±
 	}
 }

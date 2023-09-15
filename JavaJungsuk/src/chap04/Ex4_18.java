@@ -13,19 +13,19 @@ public class Ex4_18 {
 			System.out.println("(1) square");
 			System.out.println("(2) square root");
 			System.out.println("(3) log");
-			System.out.print("¿øÇÏ´Â ¸Ş´º(1~3)¸¦ ¼±ÅÃÇÏ¼¼¿ä.(Á¾·á:0)>");
+			System.out.print("ì›í•˜ëŠ” ë©”ë‰´(1~3)ë¥¼ ì„ íƒí•˜ì„¸ìš”.(ì¢…ë£Œ:0)>");
 
-			String tmp = scanner.nextLine(); // ÀÔ·Â¹ŞÀº ³»¿ëÀ» tmp¿¡ ÀúÀå
-			menu = Integer.parseInt(tmp); // ÀÔ·Â¹ŞÀº ¹®ÀÚ¿­ tmp¸¦ ¼ıÀÚ·Î º¯È¯
+			String tmp = scanner.nextLine(); // ì…ë ¥ë°›ì€ ë‚´ìš©ì„ tmpì— ì €ì¥
+			menu = Integer.parseInt(tmp); // ì…ë ¥ë°›ì€ ë¬¸ìì—´ tmpë¥¼ ìˆ«ìë¡œ ë³€í™˜
 
 			if (menu == 0) {
-				System.out.println("ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");
+				System.out.println("í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 				break;
 			} else if (!(1 <= menu && menu <= 3)) {
-				System.out.println("¸Ş´º¸¦ Àß¸ø ¼±ÅÃÇÏ¼Ì½À´Ï´Ù.(Á¾·á´Â 0)");
+				System.out.println("ë©”ë‰´ë¥¼ ì˜ëª» ì„ íƒí•˜ì…¨ìŠµë‹ˆë‹¤.(ì¢…ë£ŒëŠ” 0)");
 				continue;
 			}
-			System.out.println("¼±ÅÃÇÏ½Å ¸Ş´º´Â " + menu + "¹øÀÔ´Ï´Ù.");
+			System.out.println("ì„ íƒí•˜ì‹  ë©”ë‰´ëŠ” " + menu + "ë²ˆì…ë‹ˆë‹¤.");
 		}
 	}
 }

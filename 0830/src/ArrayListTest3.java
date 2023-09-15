@@ -8,7 +8,8 @@ class Account {
 	String id;
 	int balance;
 
-	Account() {}
+	Account() {
+	}
 
 	Account(String id, int balance) {
 		this.id = id;
@@ -17,7 +18,7 @@ class Account {
 
 	@Override
 	public String toString() {
-		return String.format("°èÁÂ¹øÈ£:%s,ÀÜ¾×:%d", id, balance);
+		return String.format("ê³„ì¢Œë²ˆí˜¸:%s, ìž”ì•¡: %d", id, balance);
 	}
 }
 
@@ -37,14 +38,14 @@ public class ArrayListTest3 {
 
 		Collections.sort(accs, new IdCompare());
 		// for (Account acc : accs) {
-		// 	System.out.println(acc);
-		// }
-		
-		// for(int i=0; i<accs.size(); i++) {
-		// 	System.out.println(accs.get(i));
+		// System.out.println(acc);
 		// }
 
-		Iterator<Account> it = accs.iterator(); // ¹Ýº¹ÀÚ
+		// for(int i=0; i<accs.size(); i++) {
+		// System.out.println(accs.get(i));
+		// }
+
+		Iterator<Account> it = accs.iterator();
 		while (it.hasNext()) {
 			Account acc = it.next();
 			System.out.println(acc);

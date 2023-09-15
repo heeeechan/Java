@@ -10,13 +10,13 @@ public class Ex2_9 {
 		System.out.printf("f1=%f, %e, %g%n", f1, f1, f1);
 		System.out.printf("f1=%f, %e, %g%n", f2, f2, f2);
 		System.out.printf("f1=%f, %e, %g%n", f3, f3, f3);
-		System.out.printf("d=%f%n", d); // %f´Â ±âº»ÀûÀ¸·Î ¼Ò¼öÁ¡ 6ÀÚ¸®±îÁö Ãâ·Â
-		System.out.printf("d=%14.10f%n", d); // ÀüÃ¼ 14ÀÚ¸® Áß ¼Ò¼öÁ¡ 10ÀÚ¸®
+		System.out.printf("d=%f%n", d); // %fëŠ” ê¸°ë³¸ì ìœ¼ë¡œ ì†Œìˆ˜ì  6ìë¦¬ê¹Œì§€ ì¶œë ¥
+		System.out.printf("d=%14.10f%n", d); // ì „ì²´ 14ìë¦¬ ì¤‘ ì†Œìˆ˜ì  10ìë¦¬
 		System.out.printf("d=%014.10f%n", d);
 		System.out.printf("[12345678901234567890]%n");
 		System.out.printf("[%s]%n", url);
-		System.out.printf("[%20s]%n", url); // ÃÖ¼Ò 20±ÛÀÚ Ãâ·Â°ø°£ È®º¸(¿ìÃøÁ¤·Ä)
-		System.out.printf("[%-20s]%n", url); // ÃÖ¼Ò 20±ÛÀÚ Ãâ·Â°ø°£ È®º¸(ÁÂÃøÁ¤·Ä)
-		System.out.printf("[%.8s]%n", url); // ¿ŞÂÊ¿¡¼­ 8±ÛÀÚ¸¸ Ãâ·Â
+		System.out.printf("[%20s]%n", url); // ìµœì†Œ 20ê¸€ì ì¶œë ¥ê³µê°„ í™•ë³´(ìš°ì¸¡ì •ë ¬)
+		System.out.printf("[%-20s]%n", url); // ìµœì†Œ 20ê¸€ì ì¶œë ¥ê³µê°„ í™•ë³´(ì¢Œì¸¡ì •ë ¬)
+		System.out.printf("[%.8s]%n", url); // ì™¼ìª½ì—ì„œ 8ê¸€ìë§Œ ì¶œë ¥
 	}
 }

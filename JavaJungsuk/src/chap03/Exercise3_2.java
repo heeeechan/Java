@@ -4,7 +4,7 @@ public class Exercise3_2 {
 	public static void main(String[] args) {
 		int x = 2;
 		int y = 5;
-		char c = 'A'; // AÀÇ ¹®ÀÚÄÚµå´Â 65
+		char c = 'A'; // Aì˜ ë¬¸ìžì½”ë“œëŠ” 65
 
 		System.out.println(y >= 5 || x < 0 && x > 2); // true
 		System.out.println(y += 10 - x++); // 13
@@ -12,7 +12,7 @@ public class Exercise3_2 {
 		System.out.println(!('A' <= c && c <= 'Z')); // false
 		System.out.println('C' - c); // 2
 		System.out.println('5' - '0'); // 5 (53 - 48)
-		System.out.println(c + 1); // 66 »ê¼úº¯È¯ intÇü
+		System.out.println(c + 1); // 66 ì‚°ìˆ ë³€í™˜ intí˜•
 		System.out.println(++c); // B
 		System.out.println(c++); // B
 		System.out.println(c); // C

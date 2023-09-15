@@ -18,12 +18,12 @@ public class AccountDAO {
 	public static Connection getConnection() {
 		Connection conn = null;
 		try {
-			Properties db = new Properties(); // Property »ç¿ë
+			Properties db = new Properties(); // Property ì‚¬ìš©
 			db.load(new FileInputStream("db.properties"));
 			Class.forName(db.getProperty("driver"));
 			conn = DriverManager.getConnection(db.getProperty("url"), db.getProperty("user"), db.getProperty("password"));
 		} catch (Exception e) {
-			// File ¿¹¿ÜÃ³¸®¿Í getConnectionÀÇ ¿¹¿Ü¸¦ ÇÑ¹ø¿¡ Ã³¸®)
+			// File ì˜ˆì™¸ì²˜ë¦¬ì™€ getConnectionì˜ ì˜ˆì™¸ë¥¼ í•œë²ˆì— ì²˜ë¦¬)
 			e.printStackTrace();
 		}
 		return conn;
@@ -39,19 +39,19 @@ public class AccountDAO {
 		}
 	}
 
-	// °èÁÂ Ãâ·Â
+	// ê³„ì¢Œ ì¶œë ¥
 	public static Account selectAccount(Connection conn, String id) {
 		Account acc = null;
-		String sql = "select * from account where id=?"; // °¡º¯À¸·Î ¹Ù²ãÁà¾ß ÇÏ´Â ºÎºĞÀ» ? ·Î ÀÛ¼º
+		String sql = "select * from account where id=?"; // ê°€ë³€ìœ¼ë¡œ ë°”ê¿”ì¤˜ì•¼ í•˜ëŠ” ë¶€ë¶„ì„ ? ë¡œ ì‘ì„±
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		try {
-			pstmt = conn.prepareStatement(sql); // ¹Ì¿Ï¼ºµÈ Äõ¸®¹®À» ±×´ë·Î ³Ö¾îÁÜ
-			pstmt.setString(1, id); // JDBC´Â ¼ø¼­¸¦ 1ºÎÅÍ ½ÃÀÛ
-			rs = pstmt.executeQuery(); // select´Â query
+			pstmt = conn.prepareStatement(sql); // ë¯¸ì™„ì„±ëœ ì¿¼ë¦¬ë¬¸ì„ ê·¸ëŒ€ë¡œ ë„£ì–´ì¤Œ
+			pstmt.setString(1, id); // JDBCëŠ” ìˆœì„œë¥¼ 1ë¶€í„° ì‹œì‘
+			rs = pstmt.executeQuery(); // selectëŠ” query
 			if (rs != null && rs.next()) {
-				String rid = rs.getString(1); // ÀÎµ¦½º·Î °¡Á®¿À±â
-				String rname = rs.getString("name"); // Ä®·³¸íÀ¸·Î °¡Á®¿À±â
+				String rid = rs.getString(1); // ì¸ë±ìŠ¤ë¡œ ê°€ì ¸ì˜¤ê¸°
+				String rname = rs.getString("name"); // ì¹¼ëŸ¼ëª…ìœ¼ë¡œ ê°€ì ¸ì˜¤ê¸°
 				Integer rbalance = rs.getInt("balance");
 				String rgrade = rs.getString("grade");
 				if (rgrade == null) {

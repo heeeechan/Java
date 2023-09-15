@@ -3,7 +3,7 @@ package chap03;
 public class Ex3_11 {
 	public static void main(String[] args) {
 		double pi = 3.141592;
-		double shorPi = Math.round(pi * 1000) / 1000.0; // double °ªÀ» »êÃâÇÏ±â À§ÇØ 1000ÀÌ ¾Æ´Ñ 1000.0 À¸·Î ³ª´®
+		double shorPi = Math.round(pi * 1000) / 1000.0; // double ê°’ì„ ì‚°ì¶œí•˜ê¸° ìœ„í•´ 1000ì´ ì•„ë‹Œ 1000.0 ìœ¼ë¡œ ë‚˜ëˆ”
 		System.out.println(shorPi);
 	}
 }

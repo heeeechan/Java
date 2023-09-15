@@ -3,13 +3,13 @@ import java.io.File;
 public class ExceptionTest7 {
 	public static void main(String[] args) {
 		File f = createFile(args[0]);
-		System.out.println(f.getName() + "ÆÄÀÏÀÌ ¼º°øÀûÀ¸·Î »ı¼ºµÇ¾ú½À´Ï´Ù.");
+		System.out.println(f.getName() + "íŒŒì¼ì´ ì„±ê³µì ìœ¼ë¡œ ìƒì„±ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	}
 
 	static File createFile(String fileName) {
 		try {
 			if (fileName == null || fileName.length() == 0) {
-				throw new Exception("ÆÄÀÏ ÀÌ¸§ÀÌ À¯È¿ÇÏÁö ¾Ê½À´Ï´Ù.");
+				throw new Exception("íŒŒì¼ ì´ë¦„ì´ ìœ íš¨í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 			}
 		} catch (Exception e) {
 			fileName = "temp.txt";

@@ -1,12 +1,12 @@
 package ex6;
 
 public class Ex6 {
-	// µÎ Á¡ (x,y)¿Í (x1,y1) °£ÀÇ °Å¸®¸¦ ±¸ÇÑ´Ù
+	// ë‘ ì  (x,y)ì™€ (x1,y1) ê°„ì˜ ê±°ë¦¬ë¥¼ êµ¬í•œë‹¤
 	static double getDistance(int x, int y, int x1, int y1) {
-        double distance = Math.sqrt(Math.pow(x1 - x, 2) + Math.pow(y1 - y, 2));
-        return distance;
+		double distance = Math.sqrt(Math.pow(x1 - x, 2) + Math.pow(y1 - y, 2));
+		return distance;
 	}
-	
+
 	public static void main(String args[]) {
 		System.out.println(getDistance(1, 1, 2, 2));
 	}

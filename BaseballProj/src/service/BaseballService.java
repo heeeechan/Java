@@ -17,55 +17,55 @@ public class BaseballService {
 		teamDAO = new TeamDAO();
 	}
 
-	// ÆÀµî·Ï
+	// íŒ€ë“±ë¡
 	public void regTeam() {
-		System.out.println("[ÆÀµî·Ï]");
-		System.out.print("ÆÀ¸í:");
+		System.out.println("[íŒ€ë“±ë¡]");
+		System.out.print("íŒ€ëª…:");
 		String teamName = sc.nextLine();
-		System.out.print("¿¬°íÁö:");
+		System.out.print("ì—°ê³ ì§€:");
 		String local = sc.nextLine();
 		teamDAO.insertTeam(new Team(null, teamName, local));
 	}
 
-	// Æ¯Á¤ÆÀÁ¶È¸(ÆÀ¸íÀ¸·Î)
+	// íŠ¹ì •íŒ€ì¡°íšŒ(íŒ€ëª…ìœ¼ë¡œ)
 	public void teamInfo() {
-		System.out.println("[ÆÀÁ¶È¸]");
-		System.out.print("ÆÀ¸í:");
+		System.out.println("[íŒ€ì¡°íšŒ]");
+		System.out.print("íŒ€ëª…:");
 		String teamName = sc.nextLine();
 		Team team = teamDAO.selectTeam(teamName);
 		System.out.println(team);
 	}
 
-	// ÆÀ¸ñ·ÏÁ¶È¸
+	// íŒ€ëª©ë¡ì¡°íšŒ
 	public void teamListInfo() {
-		System.out.println("[ÆÀÁ¶È¸]");
+		System.out.println("[íŒ€ì¡°íšŒ]");
 		List<Team> teamList = teamDAO.selectTeamList();
 		for (Team team : teamList) {
 			System.out.println(team);
 		}
 	}
 
-	// ¼±¼öµî·Ï
+	// ì„ ìˆ˜ë“±ë¡
 	public void regPlayer() {
-		System.out.println("[¼±¼öµî·Ï]");
-		System.out.print("¼±¼ö¸í:");
+		System.out.println("[ì„ ìˆ˜ë“±ë¡]");
+		System.out.print("ì„ ìˆ˜ëª…:");
 		String playerName = sc.nextLine();
-		System.out.print("µî¹øÈ£:");
+		System.out.print("ë“±ë²ˆí˜¸:");
 		Integer backNum = Integer.parseInt(sc.nextLine());
-		System.out.println("<ÆÀ¼±ÅÃ>");
+		System.out.println("<íŒ€ì„ íƒ>");
 		List<Team> teamList = teamDAO.selectTeamList();
 		for (Team team : teamList) {
 			System.out.println(team.shortString());
 		}
-		System.out.print("¼±ÅÃ>>");
+		System.out.print("ì„ íƒ>>");
 		Integer teamNum = Integer.parseInt(sc.nextLine());
 		playerDAO.insertPlayer(new Player(null, playerName, backNum, teamNum, null));
 	}
 
-	// Æ¯Á¤¼±¼öÁ¶È¸ (ÀÌ¸§À¸·Î)
+	// íŠ¹ì •ì„ ìˆ˜ì¡°íšŒ (ì´ë¦„ìœ¼ë¡œ)
 	public void playerInfoByName() {
-		System.out.println("[¼±¼öÁ¶È¸(ÀÌ¸§À¸·Î)]");
-		System.out.print("¼±¼ö¸í:");
+		System.out.println("[ì„ ìˆ˜ì¡°íšŒ(ì´ë¦„ìœ¼ë¡œ)]");
+		System.out.print("ì„ ìˆ˜ëª…:");
 		String playerName = sc.nextLine();
 		List<Player> playerList = playerDAO.selectPlayerByName(playerName);
 		for (Player player : playerList) {
@@ -73,10 +73,10 @@ public class BaseballService {
 		}
 	}
 
-	// Æ¯Á¤¼±¼öÁ¶È¸ (µî¹øÈ£·Î)
+	// íŠ¹ì •ì„ ìˆ˜ì¡°íšŒ (ë“±ë²ˆí˜¸ë¡œ)
 	public void playerInfoByBacknum() {
-		System.out.println("[¼±¼öÁ¶È¸(µî¹øÈ£·Î)]");
-		System.out.print("¼±¼ö¸í:");
+		System.out.println("[ì„ ìˆ˜ì¡°íšŒ(ë“±ë²ˆí˜¸ë¡œ)]");
+		System.out.print("ì„ ìˆ˜ëª…:");
 		Integer backNum = Integer.parseInt(sc.nextLine());
 		List<Player> playerList = playerDAO.selectPlayerByBacknum(backNum);
 		for (Player player : playerList) {
@@ -84,10 +84,10 @@ public class BaseballService {
 		}
 	}
 
-	// Æ¯Á¤¼±¼öÁ¶È¸ (¹øÈ£·Î)
+	// íŠ¹ì •ì„ ìˆ˜ì¡°íšŒ (ë²ˆí˜¸ë¡œ)
 	public void playerInfoByNum() {
-		System.out.println("[¼±¼öÁ¶È¸(¹øÈ£·Î)]");
-		System.out.print("¼±¼ö¸í:");
+		System.out.println("[ì„ ìˆ˜ì¡°íšŒ(ë²ˆí˜¸ë¡œ)]");
+		System.out.print("ì„ ìˆ˜ëª…:");
 		Integer num = Integer.parseInt(sc.nextLine());
 		List<Player> playerList = playerDAO.selectPlayerByBacknum(num);
 		for (Player player : playerList) {
@@ -95,10 +95,10 @@ public class BaseballService {
 		}
 	}
 
-	// Æ¯Á¤ÆÀ ¼Ò¼Ó ¼±¼ö ¸ñ·Ï Á¶È¸
+	// íŠ¹ì •íŒ€ ì†Œì† ì„ ìˆ˜ ëª©ë¡ ì¡°íšŒ
 	public void playerListInTeam() {
-		System.out.println("[¼±¼öÁ¶È¸(ÆÀ)]");
-		System.out.print("ÆÀÀÌ¸§:");
+		System.out.println("[ì„ ìˆ˜ì¡°íšŒ(íŒ€)]");
+		System.out.print("íŒ€ì´ë¦„:");
 		String teamName = sc.nextLine();
 		List<Player> playerList = playerDAO.selectPlayerByTeam(teamName);
 		for (Player player : playerList) {
@@ -109,18 +109,18 @@ public class BaseballService {
 	Scanner sc = new Scanner(System.in);
 
 	public int menu() {
-		System.out.println("[¾ß±¸ ÆÀ/¼±¼ö µî·Ï/Á¶È¸]");
-		System.out.println("1. ÆÀµî·Ï");
-		System.out.println("2. Æ¯Á¤ÆÀÁ¶È¸");
-		System.out.println("3. ÆÀ¸ñ·ÏÁ¶È¸");
+		System.out.println("[ì•¼êµ¬ íŒ€/ì„ ìˆ˜ ë“±ë¡/ì¡°íšŒ]");
+		System.out.println("1. íŒ€ë“±ë¡");
+		System.out.println("2. íŠ¹ì •íŒ€ì¡°íšŒ");
+		System.out.println("3. íŒ€ëª©ë¡ì¡°íšŒ");
 		System.out.println("--------------");
-		System.out.println("4. ¼±¼öµî·Ï");
-		System.out.println("5. Æ¯Á¤¼±¼öÁ¶È¸(ÀÌ¸§À¸·Î)");
-		System.out.println("6. Æ¯Á¤¼±¼öÁ¶È¸(µî¹øÈ£·Î)");
-		System.out.println("7. Æ¯Á¤¼±¼öÁ¶È¸(¹øÈ£·Î)");
-		System.out.println("8. Æ¯Á¤ÆÀ¼±¼ö¸ñ·ÏÁ¶È¸");
-		System.out.println("0. Á¾·á");
-		System.out.print("¼±ÅÃ>>");
+		System.out.println("4. ì„ ìˆ˜ë“±ë¡");
+		System.out.println("5. íŠ¹ì •ì„ ìˆ˜ì¡°íšŒ(ì´ë¦„ìœ¼ë¡œ)");
+		System.out.println("6. íŠ¹ì •ì„ ìˆ˜ì¡°íšŒ(ë“±ë²ˆí˜¸ë¡œ)");
+		System.out.println("7. íŠ¹ì •ì„ ìˆ˜ì¡°íšŒ(ë²ˆí˜¸ë¡œ)");
+		System.out.println("8. íŠ¹ì •íŒ€ì„ ìˆ˜ëª©ë¡ì¡°íšŒ");
+		System.out.println("0. ì¢…ë£Œ");
+		System.out.print("ì„ íƒ>>");
 		return Integer.parseInt(sc.nextLine());
 	}
 }

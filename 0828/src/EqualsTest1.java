@@ -1,7 +1,7 @@
-// º¹¼Ò¼ö
+//ë³µì†Œìˆ˜
 class Complex {
-	int real; // ½Ç¼öºÎ
-	int imaginary; // Çã¼öºÎ
+	int real;// ì‹¤ìˆ˜ë¶€
+	int imaginary;// í—ˆìˆ˜ë¶€
 
 	public Complex(int real, int imaginary) {
 		this.real = real;
@@ -24,13 +24,14 @@ class Complex {
 }
 
 public class EqualsTest1 {
+
 	public static void main(String[] args) {
 		Complex c1 = new Complex(3, 5);
 		Complex c2 = new Complex(3, 5);
 		Complex c3 = new Complex(5, 3);
 		System.out.println(c1.equals(c2)); // true
 		System.out.println(c1.equals(c3)); // false
-		System.out.println(c1); // 3+5i
-		System.out.println(c3); // 5+3i
+		System.out.println(c1);
+
 	}
 }

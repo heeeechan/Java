@@ -17,12 +17,12 @@ public class TeamDAO {
 	public static Connection getConnection() {
 		Connection conn = null;
 		try {
-			Properties db = new Properties(); // Property »ç¿ë
+			Properties db = new Properties(); // Property ì‚¬ìš©
 			db.load(new FileInputStream("db.properties"));
 			Class.forName(db.getProperty("driver"));
 			conn = DriverManager.getConnection(db.getProperty("url"), db.getProperty("user"), db.getProperty("password"));
 		} catch (Exception e) {
-			// File ¿¹¿ÜÃ³¸®¿Í getConnectionÀÇ ¿¹¿Ü¸¦ ÇÑ¹ø¿¡ Ã³¸®)
+			// File ì˜ˆì™¸ì²˜ë¦¬ì™€ getConnectionì˜ ì˜ˆì™¸ë¥¼ í•œë²ˆì— ì²˜ë¦¬)
 			e.printStackTrace();
 		}
 		return conn;

@@ -16,19 +16,19 @@ public class GenericTest {
 		d.setData("hong");
 		String s = d.getData();
 		System.out.println(s);
-		
+
 		Data<Integer> d2 = new Data<>();
 		d2.setData(200);
 		int n = d2.getData();
 		System.out.println(n);
-	
+
 		Data<Person> d3 = new Data<>();
 		d3.setData(new Person("james", 30));
 		Person p = d3.getData();
 		System.out.println(p);
-		
-		// d2 = d; //X, ´Ù¸¥ Å¸ÀÔÀ¸·Î »ı¼ºµÈ Á¦³Ê¸¯ °´Ã¼´Â µ¿ÀÏÇÑ Å¬·¡½º°¡ ¾Æ´Ï´Ù. (»ó¼Ó°ü°èµµ ¾Æ´Ï´Ù.)
+
+		// d2 = d; //X, ë‹¤ë¥¸ íƒ€ì…ìœ¼ë¡œ ìƒì„±ëœ ì œë„ˆë¦­ ê°ì²´ëŠ” ë™ì¼í•œ í´ë˜ìŠ¤ê°€ ì•„ë‹ˆë‹¤. (ìƒì†ê´€ê³„ë„ ì•„ë‹ˆë‹¤.)
 		Data<Person> d4 = new Data();
-		// d3 = d4; //O, °°Àº Å¸ÀÔÀ¸·Î »ı¼ºµÈ Á¦³Ê¸¯ °´Ã¼´Â µ¿ÀÏÇÑ Å¬·¡½º´Ù.
+		// d3 = d4; //O, ê°™ì€ íƒ€ì…ìœ¼ë¡œ ìƒì„±ëœ ì œë„ˆë¦­ ê°ì²´ëŠ” ë™ì¼í•œ í´ë˜ìŠ¤ë‹¤.
 	}
 }

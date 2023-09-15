@@ -1,37 +1,41 @@
 class Person {
 	int age;
 	String name;
-	
+
 	Person() {
-		this("none", 0); // »ı¼ºÀÚ¿¡¼­ ´Ù¸¥ »ı¼ºÀÚ È£Ãâ, ¹İµå½Ã »ı¼ºÀÚ ¸Ç Ã³À½¿¡ È£ÃâÇØ¾ß ÇÔ
+		this("none", 0); // ìƒì„±ìì—ì„œ ë‹¤ë¥¸ ìƒì„±ì í˜¸ì¶œ, ë°˜ë“œì‹œ ìƒì„±ì ë§¨ ì²˜ìŒì— í˜¸ì¶œí•´ì•¼ í•¨
 	}
+
 	Person(String n, int a) {
 		age = a;
 		name = n;
 	}
+
 	Person(String n) {
 		this(n, 0);
 	}
+
 	Person(int a) {
 		this("none", a);
 	}
+
 	Person(Person p) {
 		name = p.name;
 		age = p.age;
 	}
-	
+
 //	String info(Person this) {
-//		return "ÀÌ¸§:" + this.name + ",³ªÀÌ" + this.age;
+//		return "ì´ë¦„:" + this.name + ",ë‚˜ì´" + this.age;
 //	}
 }
 
 public class ConstructorTest1 {
 	public static void main(String[] args) {
-		Person per1 = new Person("È«±æµ¿", 20);
+		Person per1 = new Person("í™ê¸¸ë™", 20);
 		Person per2 = new Person();
-		per2.name = "°í±æµ¿";
+		per2.name = "ê³ ê¸¸ë™";
 		per2.age = 30;
-		Person per3 = new Person("Â÷±æµ¿");
+		Person per3 = new Person("ì°¨ê¸¸ë™");
 		Person per4 = new Person(40);
 		Person per5 = new Person(per1);
 	}

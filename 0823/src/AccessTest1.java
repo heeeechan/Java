@@ -3,18 +3,18 @@ import pac.Number;
 public class AccessTest1 {
 	public static void main(String[] args) {
 		Number n1 = new Number();
-		// ´Ù¸¥ Å¬·¡½ºÀÇ private ¸â¹ö´Â Á¢±Ù ºÒ°¡
+		// ë‹¤ë¥¸ í´ë˜ìŠ¤ì˜ private ë©¤ë²„ëŠ” ì ‘ê·¼ ë¶ˆê°€
 		// n1.pnum = 100;
 		// n1.pethod();
-	
+
 		// n1.dnum = 100;
 		n1.setDnum(100);
 		n1.dmethod();
-		
+
 		n1.punum = 100;
 		n1.pumethod();
-		
-		// ÀÚ½Äµµ ¾Æ´Ï°í °°Àº ÆĞÅ°Áöµµ ¾Æ´Ô. protected Á¢±Ù ºÒ°¡
+
+		// ìì‹ë„ ì•„ë‹ˆê³  ê°™ì€ íŒ¨í‚¤ì§€ë„ ì•„ë‹˜. protected ì ‘ê·¼ ë¶ˆê°€
 		// n1.prnum = 100;
 	}
 }

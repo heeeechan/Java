@@ -2,17 +2,17 @@ public class ClassTest1 {
 	public static void main(String[] args) {
 		int n;
 		double d;
-		
+
 		int[] arr = new int[3];
 
 		Student stu1 = new Student();
 		Student stu2;
-		
-		stu1.name = "È«±æµ¿";
-		stu1.address = "¼­¿ï½Ã ±İÃµ±¸";
+
+		stu1.name = "ê¹€í¬ì°¬";
+		stu1.address = "ì„œìš¸ì‹œ ë™ì‘êµ¬";
 		stu1.grade = 4;
 		stu1.num = 10001;
-		
+
 		System.out.println(stu1.info());
 	}
 }

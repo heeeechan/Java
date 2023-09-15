@@ -10,42 +10,42 @@ class MyTv {
 	final int MIN_CHANNEL = 1;
 
 	void turnOnOff() {
-		// (1) isPowerOnÀÇ °ªÀÌ true¸é false·Î, false¸é true·Î ¹Ù²Û´Ù.
+		// (1) isPowerOnì˜ ê°’ì´ trueë©´ falseë¡œ, falseë©´ trueë¡œ ë°”ê¾¼ë‹¤.
 		isPowerOn = !isPowerOn;
 	}
 
 	void volumeUp() {
-		// (2) volumeÀÇ °ªÀÌ MAX_VOLUMEº¸´Ù ÀÛÀ» ¶§¸¸ °ªÀ» 1Áõ°¡½ÃÅ²´Ù.
+		// (2) volumeì˜ ê°’ì´ MAX_VOLUMEë³´ë‹¤ ì‘ì„ ë•Œë§Œ ê°’ì„ 1ì¦ê°€ì‹œí‚¨ë‹¤.
 		if (volume < MAX_VOLUME) {
 			volume++;
 		}
 	}
 
 	void volumeDown() {
-		// (3) volumeÀÇ °ªÀÌ MIN_VOLUMEº¸´Ù Å¬ ¶§¸¸ °ªÀ» 1°¨¼Ò½ÃÅ²´Ù.
+		// (3) volumeì˜ ê°’ì´ MIN_VOLUMEë³´ë‹¤ í´ ë•Œë§Œ ê°’ì„ 1ê°ì†Œì‹œí‚¨ë‹¤.
 		if (volume > MIN_VOLUME) {
 			volume--;
 		}
 	}
 
 	void channelUp() {
-		// (4) channelÀÇ °ªÀ» 1Áõ°¡½ÃÅ²´Ù.
-		// ¸¸ÀÏ channelÀÌ MAX_CHANNELÀÌ¸é, channelÀÇ °ªÀ» MIN_CHANNEL·Î ¹Ù²Û´Ù.
-        if (channel == MAX_CHANNEL) {
-            channel = MIN_CHANNEL;
-        } else {
-            channel += 1;
-        }
+		// (4) channelì˜ ê°’ì„ 1ì¦ê°€ì‹œí‚¨ë‹¤.
+		// ë§Œì¼ channelì´ MAX_CHANNELì´ë©´, channelì˜ ê°’ì„ MIN_CHANNELë¡œ ë°”ê¾¼ë‹¤.
+		if (channel == MAX_CHANNEL) {
+			channel = MIN_CHANNEL;
+		} else {
+			channel += 1;
+		}
 	}
 
 	void channelDown() {
-		// (5) channelÀÇ °ªÀ» 1°¨¼Ò½ÃÅ²´Ù.
-		// ¸¸ÀÏ channelÀÌ MIN_CHANNELÀÌ¸é, channelÀÇ °ªÀ» MAX_CHANNEL·Î ¹Ù²Û´Ù.
-        if (channel == MIN_CHANNEL) {
-            channel = MAX_CHANNEL;
-        } else {
-            channel -= 1;
-        }
+		// (5) channelì˜ ê°’ì„ 1ê°ì†Œì‹œí‚¨ë‹¤.
+		// ë§Œì¼ channelì´ MIN_CHANNELì´ë©´, channelì˜ ê°’ì„ MAX_CHANNELë¡œ ë°”ê¾¼ë‹¤.
+		if (channel == MIN_CHANNEL) {
+			channel = MAX_CHANNEL;
+		} else {
+			channel -= 1;
+		}
 	}
 }
 

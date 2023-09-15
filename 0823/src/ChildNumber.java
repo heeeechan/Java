@@ -2,14 +2,14 @@ import pac.Number;
 
 public class ChildNumber extends Number {
 	void cmethod() {
-		// ÀÚ½ÄÀÌ¾îµµ ºÎ¸ğÀÇ private Á¢±Ù ºÒ°¡
+		// ìì‹ì´ì–´ë„ ë¶€ëª¨ì˜ private ì ‘ê·¼ ë¶ˆê°€
 		// System.out.println(pnum);
-		// ÀÚ½ÄÀÌ¾îµµ ºÎ¸ğ¿Í ´Ù¸¥ ÆĞÅ°Áö¸é default Á¢±Ù ºÒ°¡
+		// ìì‹ì´ì–´ë„ ë¶€ëª¨ì™€ ë‹¤ë¥¸ íŒ¨í‚¤ì§€ë©´ default ì ‘ê·¼ ë¶ˆê°€
 		// System.out.println(dnum);
-		
-		// ÆĞÅ°Áö°¡ ´Ù¶öµµ ºÎ¸ğ protected´Â Á¢±Ù °¡´É
+
+		// íŒ¨í‚¤ì§€ê°€ ë‹¬ë¼ë„ ë¶€ëª¨ protectedëŠ” ì ‘ê·¼ ê°€ëŠ¥
 		System.out.println(prnum);
-		
+
 		System.out.println(punum);
 	}
 }

@@ -26,7 +26,7 @@ class Helper extends Unit implements Helping {
 	@Override
 	public void help() {
 	}
-	
+
 	@Override
 	public void move() {
 	}
@@ -34,15 +34,15 @@ class Helper extends Unit implements Helping {
 
 public class InterfaceTest1 {
 	public static void main(String[] args) {
-		//Fightable fighter = new Fighter(); // upcasting
+		// Fightable fighter = new Fighter(); // upcasting
 		// fighter.fight();
-		// fighter.move(); // ·¹ÆÛ·±½º Å¸ÀÔ¿¡ ¾ø´Â ¸Ş¼Òµå È£ÃâÀº ºÒ°¡´É
-		
+		// fighter.move(); // ë ˆí¼ëŸ°ìŠ¤ íƒ€ì…ì— ì—†ëŠ” ë©”ì†Œë“œ í˜¸ì¶œì€ ë¶ˆê°€ëŠ¥
+
 		Fighter fighter = new Fighter();
 		Fightable fighter1 = fighter;
 		Unit unit = fighter;
-		//Object obj = fighter;
-		
+		// Object obj = fighter;
+
 		Helper helper = new Helper();
 	}
 }

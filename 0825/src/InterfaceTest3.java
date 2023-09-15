@@ -7,7 +7,7 @@ class BasicButton {
 	IClick iClick;
 
 	void click() {
-		System.out.println("¹öÆ° ±âº» Ã³¸®");
+		System.out.println("ë²„íŠ¼ ê¸°ë³¸ ì²˜ë¦¬");
 		if (iClick != null) {
 			iClick.iclick();
 		}
@@ -21,7 +21,7 @@ class BasicButton {
 class LoginClick implements IClick {
 	@Override
 	public void iclick() {
-		System.out.println("·Î±×ÀÎ Ã³¸®");
+		System.out.println("ë¡œê·¸ì¸ ì²˜ë¦¬");
 	}
 }
 
@@ -34,7 +34,7 @@ public class InterfaceTest3 {
 		joinBtn.addClickEventHandler(new IClick() {
 			@Override
 			public void iclick() {
-				System.out.println("È¸¿ø°¡ÀÔ Ã³¸®");
+				System.out.println("íšŒì›ê°€ì… ì²˜ë¦¬");
 			}
 		});
 	}

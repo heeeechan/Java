@@ -12,26 +12,26 @@ public class Bank {
 	Scanner sc = new Scanner(System.in);
 
 	int menu() throws BankException {
-		System.out.println("[ÄÚ½ºÅ¸ ÀºÇà]");
-		System.out.println("1. °èÁÂ°³¼³");
-		System.out.println("2. ÀÔ±İ");
-		System.out.println("3. Ãâ±İ");
-		System.out.println("4. °èÁÂÁ¶È¸");
-		System.out.println("5. ÀüÃ¼°èÁÂÁ¶È¸");
-		System.out.println("0. Á¾·á");
-		System.out.print("¼±ÅÃ>>");
+		System.out.println("[ì½”ìŠ¤íƒ€ ì€í–‰]");
+		System.out.println("1. ê³„ì¢Œê°œì„¤");
+		System.out.println("2. ì…ê¸ˆ");
+		System.out.println("3. ì¶œê¸ˆ");
+		System.out.println("4. ê³„ì¢Œì¡°íšŒ");
+		System.out.println("5. ì „ì²´ê³„ì¢Œì¡°íšŒ");
+		System.out.println("0. ì¢…ë£Œ");
+		System.out.print("ì„ íƒ>>");
 		int sel = Integer.parseInt(sc.nextLine());
 		if (!(sel >= 0 && sel <= 5)) {
-			throw new BankException("¸Ş´º¿À·ù", BankError.MENU);
+			throw new BankException("ë©”ë‰´ì˜¤ë¥˜", BankError.MENU);
 		}
 		return sel;
 	}
 
 	void selAccMenu() throws BankException {
-		System.out.println("[°èÁÂ°³¼³]");
-		System.out.println("1.ÀÏ¹İ°èÁÂ");
-		System.out.println("2.Æ¯¼ö°èÁÂ");
-		System.out.print("¼±ÅÃ>>");
+		System.out.println("[ê³„ì¢Œê°œì„¤]");
+		System.out.println("1.ì¼ë°˜ê³„ì¢Œ");
+		System.out.println("2.íŠ¹ìˆ˜ê³„ì¢Œ");
+		System.out.print("ì„ íƒ>>");
 		int sel = Integer.parseInt(sc.nextLine());
 		switch (sel) {
 		case 1:
@@ -41,23 +41,23 @@ public class Bank {
 			makeSpecialAccount();
 			break;
 		default:
-			throw new BankException("¸Ş´º¿À·ù", BankError.MENU);
+			throw new BankException("ë©”ë‰´ì˜¤ë¥˜", BankError.MENU);
 		}
 	}
 
 	void makeAccount() throws BankException {
 		Connection conn = AccountDAO.getConnection();
-		System.out.println("[ÀÏ¹İ°èÁÂ °³¼³]");
-		System.out.print("°èÁÂ¹øÈ£:");
+		System.out.println("[ì¼ë°˜ê³„ì¢Œ ê°œì„¤]");
+		System.out.print("ê³„ì¢Œë²ˆí˜¸:");
 		String id = sc.nextLine();
 		Account acc = AccountDAO.selectAccount(conn, id);
 		if (acc != null) {
 			AccountDAO.close(conn);
-			throw new BankException("°èÁÂ¿À·ù", BankError.EXISTID);
+			throw new BankException("ê³„ì¢Œì˜¤ë¥˜", BankError.EXISTID);
 		}
-		System.out.print("ÀÌ¸§:");
+		System.out.print("ì´ë¦„:");
 		String name = sc.nextLine();
-		System.out.print("ÀÔ±İ¾×:");
+		System.out.print("ì…ê¸ˆì•¡:");
 		int money = Integer.parseInt(sc.nextLine());
 		AccountDAO.insertAccount(conn, new Account(id, name, money));
 		AccountDAO.close(conn);
@@ -65,37 +65,37 @@ public class Bank {
 
 	void makeSpecialAccount() throws BankException {
 		Connection conn = AccountDAO.getConnection();
-		System.out.println("[Æ¯¼ö°èÁÂ °³¼³]");
-		System.out.print("°èÁÂ¹øÈ£:");
+		System.out.println("[íŠ¹ìˆ˜ê³„ì¢Œ ê°œì„¤]");
+		System.out.print("ê³„ì¢Œë²ˆí˜¸:");
 		String id = sc.nextLine();
 		Account acc = AccountDAO.selectAccount(conn, id);
 		if (acc != null) {
 			AccountDAO.close(conn);
-			throw new BankException("°èÁÂ¿À·ù", BankError.EXISTID);
+			throw new BankException("ê³„ì¢Œì˜¤ë¥˜", BankError.EXISTID);
 		}
-		System.out.print("ÀÌ¸§:");
+		System.out.print("ì´ë¦„:");
 		String name = sc.nextLine();
-		System.out.print("ÀÔ±İ¾×:");
+		System.out.print("ì…ê¸ˆì•¡:");
 		int money = Integer.parseInt(sc.nextLine());
-		System.out.print("µî±Ş(VIP-V,Gold-G,Silver-S,Normal-N):");
+		System.out.print("ë“±ê¸‰(VIP-V,Gold-G,Silver-S,Normal-N):");
 		String grade = sc.nextLine();
-		// Ãß°¡
+		// ì¶”ê°€
 		AccountDAO.insertAccount(conn, new SpecialAccount(id, name, money, grade));
 		AccountDAO.close(conn);
 	}
 
 	void deposit() throws BankException {
 		Connection conn = AccountDAO.getConnection();
-		System.out.println("[ÀÔ±İ]");
-		System.out.print("°èÁÂ¹øÈ£:");
+		System.out.println("[ì…ê¸ˆ]");
+		System.out.print("ê³„ì¢Œë²ˆí˜¸:");
 		String id = sc.nextLine();
 		Account acc = AccountDAO.selectAccount(conn, id);
 		if (acc == null) {
 			AccountDAO.close(conn);
-			throw new BankException("°èÁÂ¿À·ù", BankError.NOID);
+			throw new BankException("ê³„ì¢Œì˜¤ë¥˜", BankError.NOID);
 		}
 
-		System.out.print("ÀÔ±İ¾×:");
+		System.out.print("ì…ê¸ˆì•¡:");
 		int money = Integer.parseInt(sc.nextLine());
 		acc.deposit(money);
 		AccountDAO.updateAccount(conn, acc);
@@ -104,15 +104,15 @@ public class Bank {
 
 	void withdraw() throws BankException {
 		Connection conn = AccountDAO.getConnection();
-		System.out.println("[Ãâ±İ]");
-		System.out.print("°èÁÂ¹øÈ£:");
+		System.out.println("[ì¶œê¸ˆ]");
+		System.out.print("ê³„ì¢Œë²ˆí˜¸:");
 		String id = sc.nextLine();
 		Account acc = AccountDAO.selectAccount(conn, id);
 		if (acc == null) {
 			AccountDAO.close(conn);
-			throw new BankException("°èÁÂ¿À·ù", BankError.NOID);
+			throw new BankException("ê³„ì¢Œì˜¤ë¥˜", BankError.NOID);
 		}
-		System.out.print("Ãâ±İ¾×:");
+		System.out.print("ì¶œê¸ˆì•¡:");
 		int money = Integer.parseInt(sc.nextLine());
 		acc.withdraw(money);
 		AccountDAO.updateAccount(conn, acc);
@@ -121,13 +121,13 @@ public class Bank {
 
 	void accountInfo() throws BankException {
 		Connection conn = AccountDAO.getConnection();
-		System.out.println("[°èÁÂÁ¶È¸]");
-		System.out.print("°èÁÂ¹øÈ£:");
+		System.out.println("[ê³„ì¢Œì¡°íšŒ]");
+		System.out.print("ê³„ì¢Œë²ˆí˜¸:");
 		String id = sc.nextLine();
 		Account acc = AccountDAO.selectAccount(conn, id);
 		if (acc == null) {
 			AccountDAO.close(conn);
-			throw new BankException("°èÁÂ¿À·ù", BankError.NOID);
+			throw new BankException("ê³„ì¢Œì˜¤ë¥˜", BankError.NOID);
 		}
 		System.out.println(acc);
 		AccountDAO.close(conn);
@@ -135,7 +135,7 @@ public class Bank {
 
 	void allAccountInfo() {
 		Connection conn = AccountDAO.getConnection();
-		System.out.println("[ÀüÃ¼ °èÁÂ Á¶È¸]");
+		System.out.println("[ì „ì²´ ê³„ì¢Œ ì¡°íšŒ]");
 		List<Account> accs = AccountDAO.selectAccountList(conn);
 		for (Account acc : accs) {
 			System.out.println(acc);
@@ -170,7 +170,7 @@ public class Bank {
 					break;
 				}
 			} catch (NumberFormatException e) {
-				System.out.println("ÀÔ·ÂÇü½ÄÀÌ ¸ÂÁö ¾Ê½À´Ï´Ù. ´Ù½Ã ¼±ÅÃÇÏ¼¼¿ä.");
+				System.out.println("ì…ë ¥í˜•ì‹ì´ ë§ì§€ ì•ŠìŠµë‹ˆë‹¤. ë‹¤ì‹œ ì„ íƒí•˜ì„¸ìš”.");
 			} catch (BankException e) {
 				// e.printStackTrace();
 				System.out.println(e);

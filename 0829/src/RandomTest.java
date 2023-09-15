@@ -1,9 +1,9 @@
 public class RandomTest {
 
 	public static void main(String[] args) {
-		// 2~8 ·£´ı°ª ±¸ÇÏ±â
+		// 2~8 ëœë¤ê°’ êµ¬í•˜ê¸°
 		int r = (int) (Math.random() * (8 - 2 + 1)) + 2;
-		// (int) (Math.random() * (ÃÖ´ñ°ª - ÃÖ¼Ú°ª + 1)) + ÃÖ¼Ú°ª
+		// (int) (Math.random() * (ìµœëŒ“ê°’ - ìµœì†Ÿê°’ + 1)) + ìµœì†Ÿê°’
 		System.out.println(r);
 	}
 }
